@@ -1,3 +1,4 @@
 #!/bin/bash
 
-if stat /var/dont-need-this.png; then exit 1; fi
+stat /root/.cargo/bin/bpf-linker
+stat /root/.cargo/bin/cargo-generate
