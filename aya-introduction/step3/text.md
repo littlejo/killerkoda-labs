@@ -1,14 +1,9 @@
-
-Install dependancies cargo-generate and bpf-linker
+You also need to install the dependencies cargo-generate and bpf-linker.
 
 <br>
 
 ### Solution
 
 ```plain
-cargo install cargo-generate
-```{{exec}}
-
-```plain
-cargo install bpf-linker
+cargo install cargo-generate bpf-linker
 ```{{exec}}

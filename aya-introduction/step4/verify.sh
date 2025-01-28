@@ -1,3 +1,4 @@
 #!/bin/bash
 
-stat /root/book/examples/kprobetcp
+stat /root/aya-examples/tracepoint-binary/target/debug/tracepoint-binary
+

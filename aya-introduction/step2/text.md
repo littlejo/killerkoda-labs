@@ -1,5 +1,4 @@
-
-Aya needs some new features in Rust. So you need to configure Rust to access it.
+Aya requires some new features in Rust, so you need to configure Rust to enable them.
 
 <br>
 

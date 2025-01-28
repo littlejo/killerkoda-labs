@@ -1,6 +1,1 @@
-
-<br>
-
-### Look at you, learning Aya
-
-You solved this challenge!
+Now you can create eBPF programs with Aya!

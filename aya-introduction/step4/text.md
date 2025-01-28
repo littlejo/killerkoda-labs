@@ -1,20 +1,20 @@
-
-Check installation on an example
+Verify the installation with an example
 
 <br>
 
+Run the following command to execute the example:
 ```plain
-git clone https://github.com/aya-rs/book.git
-cd book/examples/kprobetcp/
+git clone https://github.com/littlejo/aya-examples
+cd aya-examples/tracepoint-binary
 ```{{exec}}
 
 ```plain
 RUST_LOG=info cargo run
 ```{{exec}}
 
-On another terminal:
+On another terminal, run:
 ```plain
-RUST_LOG=info curl 1.1.1.1
+ls
 ```{{exec}}
 
-* Look what you see on the other terminal.
+* Observe the output in the first terminal to see what happens.
