@@ -13,4 +13,6 @@ RUST_LOG=info cargo run
 * On another terminal, launch shell command.
 
 You must see on the "cargo run" terminal:
+```plain
 [INFO  aya_test] tracepoint sys_enter_execve called
+```
