@@ -2,7 +2,9 @@ Before coding an eBPF program with Aya, you need to install dependancies. I crea
 
 <br>
 
-### Solution
+In this tutorial, you only can use **Editor** tab.
+
+Launch this command in the Terminal at the bottom:
 
 ```plain
 docker run --rm -it --name aya \

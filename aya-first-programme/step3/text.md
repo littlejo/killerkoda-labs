@@ -2,7 +2,7 @@ Test the eBPF program:
 
 <br>
 
-### Solution
+In the container, run these commands:
 
 ```plain
 cd /host/root/aya-test
