@@ -22,7 +22,7 @@ The filename is at the offset 16. So you have to add in try_aya_test function:
 
 ```plain
 let _filename_src_addr = unsafe {ctx.read_at::<*const u8>(16)?};
-```
+```{{copy}}
 
 Try to launch cargo run but you will have typing error. You have to change return function:
 

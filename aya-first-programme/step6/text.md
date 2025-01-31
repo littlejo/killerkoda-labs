@@ -20,7 +20,7 @@ You can have information about this function: https://doc.rust-lang.org/core/str
 
 ```plain
 let filename = unsafe { core::str::from_utf8_unchecked(_filename_bytes) };
-```
+```{{copy}}
 
 You can change info macro like that now:
 ```plain
