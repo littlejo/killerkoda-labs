@@ -9,7 +9,13 @@ fn try_aya_test(ctx: TracePointContext) -> Result<u32, u32> {
     Ok(0)
 }
 ```
-You can have information about TracePointContext on: https://docs.rs/aya-ebpf/latest/aya_ebpf/programs/tracepoint/struct.TracePointContext.html
+* You can have information about TracePointContext on: https://docs.rs/aya-ebpf/latest/aya_ebpf/programs/tracepoint/struct.TracePointContext.html
+
+* The signature of read_at is:
+
+```plain
+pub unsafe fn read_at<T>(&self, offset: usize) -> Result<T, i64>
+```
 
 <br>
 
@@ -31,7 +37,7 @@ fn try_test_aya(ctx: TracePointContext) -> Result<u32, i64> { //u32 -> i64
 ```
 
 And modify test_aya function using cast:
-```plain
+```plain{4}
 pub fn test_aya(ctx: TracePointContext) -> u32 {
     match try_test_aya(ctx) {
         Ok(ret) => ret,
