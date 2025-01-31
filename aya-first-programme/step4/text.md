@@ -30,7 +30,7 @@ The filename is at the offset 16. So you have to add in try_aya_test function:
 let _filename_src_addr = unsafe {ctx.read_at::<*const u8>(16)?};
 ```{{copy}}
 
-Try to launch cargo run but you will have typing error. You have to change return function:
+Try to launch `cargo run` but you will have typing error. You have to change return function:
 
 ```plain
 fn try_test_aya(ctx: TracePointContext) -> Result<u32, i64> { //u32 -> i64
@@ -46,4 +46,8 @@ pub fn test_aya(ctx: TracePointContext) -> u32 {
 }
 ```
 
-* Now it should be compiled.
+* Now it should be compiled:
+```plain
+cd /host/root/aya-test #In the container
+RUST_LOG=info cargo run
+```{{exec}}

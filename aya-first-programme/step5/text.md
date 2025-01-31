@@ -23,5 +23,8 @@ let mut buf = [0u8; 16];
 let _filename_bytes :&[u8] = unsafe { aya_ebpf::helpers::bpf_probe_read_user_str_bytes(_filename_src_addr, &mut buf)? };
 ```{{copy}}
 
-* cargo run should work.
-
+* cargo run should work:
+```plain
+cd /host/root/aya-test #In the container
+RUST_LOG=info cargo run
+```{{exec}}
