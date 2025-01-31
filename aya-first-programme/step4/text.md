@@ -1,6 +1,6 @@
-Now you have to improve the code to log which command is executed.
+Now you have to improve the code to log which commands are executed.
 
-You have to modified kernel space programme: `aya-test-ebpf/src/main.rs`
+You have to modified kernel space program: `aya-test-ebpf/src/main.rs`
 
 Particularly this code:
 ```plain

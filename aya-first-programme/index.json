@@ -1,5 +1,5 @@
 {
-  "title": "Aya: Your first programme",
+  "title": "Aya: Your first program",
   "description": "Let's learn how to code with Aya",
   "details": {
     "intro": {
@@ -18,9 +18,14 @@
         "verify": "step2/verify.sh"
       },
       {
-        "title": "Check your Aya programme",
+        "title": "Check your Aya program",
         "text": "step3/text.md",
         "verify": "step3/verify.sh"
+      },
+      {
+        "title": "Coding: Use a text editor",
+        "text": "step3b/text.md",
+        "verify": "step3b/verify.sh"
       },
       {
         "title": "Coding: Retrieve filename address",

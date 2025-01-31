@@ -1,4 +1,4 @@
-Test the eBPF programme:
+Test the eBPF program:
 
 <br>
 
@@ -9,10 +9,8 @@ cd /host/root/aya-test
 RUST_LOG=info cargo run
 ```{{exec}}
 
-* When you see: "Waiting for Ctrl-C..."
-* On another terminal, launch shell command.
-
-You must see on the "cargo run" terminal:
+* When you see: "Waiting for Ctrl-C...", You must see on the terminal:
 ```plain
 [INFO  aya_test] tracepoint sys_enter_execve called
 ```
+* Which binaries are launched ?
