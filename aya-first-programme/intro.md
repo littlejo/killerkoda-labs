@@ -1,1 +1,1 @@
-This tutorial explains how to create an eBPF programme with Aya
+This tutorial explains how to create an eBPF program with Aya
