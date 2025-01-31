@@ -1,1 +1,1 @@
-docker pull littlejo/aya
+docker pull littlejo/aya:slim

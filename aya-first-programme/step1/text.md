@@ -12,6 +12,6 @@ docker run --rm -it --name aya \
                     -e RUST_LOG=info \
                     -v /:/host \
                     -v /sys/kernel/debug:/sys/kernel/debug \
-                    littlejo/aya bash
+                    littlejo/aya:slim bash
 ```{{exec}}
 
