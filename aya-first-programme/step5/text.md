@@ -1,6 +1,6 @@
 Now you have to read the address to have the filename byte
 
-You have to modified kernel space programme: test-aya-ebpf/src/main.rs
+You have to modified kernel space programme: `aya-test-ebpf/src/main.rs`
 
 Particularly this code:
 ```plain

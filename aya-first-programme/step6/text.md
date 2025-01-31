@@ -1,6 +1,6 @@
 Now you have to convert the filename bytes into filename string
 
-You have to modified kernel space programme: test-aya-ebpf/src/main.rs
+You have to modified kernel space programme: `aya-test-ebpf/src/main.rs`
 
 Particularly this code:
 ```plain
