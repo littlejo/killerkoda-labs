@@ -16,7 +16,7 @@ You can have information about this helper function: https://docs.rs/aya-ebpf/la
 
 <br>
 
-The helper function need a buffer, so you should add:
+The helper function needs a buffer, so you should add:
 
 ```plain
 let mut buf = [0u8; 16];

@@ -17,3 +17,9 @@ docker run --rm -it --name aya \
                     littlejo/aya:slim bash
 ```{{exec}}
 
+* It can take a long time. During this time, you can install Rust extensions (in the OPEN VSX Registry) for the Editor:
+  * Rust
+  * Rust Syntax
+  * Rust Extension Pack
+
+Like that, in Rust code, you will see coloration of syntax.
