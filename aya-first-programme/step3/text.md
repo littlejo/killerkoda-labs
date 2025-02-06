@@ -13,4 +13,4 @@ RUST_LOG=info cargo run
 ```plain
 [INFO  aya_test] tracepoint sys_enter_execve called
 ```
-* Which binaries are launched ?
+* Which binaries are being launched? eBPF can help you find them.
