@@ -9,7 +9,7 @@ fn try_aya_test(ctx: TracePointContext) -> Result<u32, u32> {
     Ok(0)
 }
 ```
-* You can have information about TracePointContext on: https://docs.rs/aya-ebpf/latest/aya_ebpf/programs/tracepoint/struct.TracePointContext.html
+* You can have information about TracePointContext on the [documentation](https://docs.rs/aya-ebpf/latest/aya_ebpf/programs/tracepoint/struct.TracePointContext.html).
 
 * The signature of read_at is:
 

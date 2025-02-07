@@ -23,7 +23,7 @@
         "verify": "step3/verify.sh"
       },
       {
-        "title": "Coding: Use a text editor",
+        "title": "Coding: Which files to modify?",
         "text": "step3b/text.md",
         "verify": "step3b/verify.sh"
       },

@@ -13,8 +13,8 @@ fn try_test_aya(ctx: TracePointContext) -> Result<u32, i64> {
 }
 ```{{copy}}
 
-You can use a helper function: **bpf_probe_read_user_str_bytes** for that.
-You can have information about this helper function: https://docs.rs/aya-ebpf/latest/aya_ebpf/helpers/fn.bpf_probe_read_user_str_bytes.html
+* You can use a helper function: **bpf_probe_read_user_str_bytes** for that.
+* You can have information about this helper function on the [documentation](https://docs.rs/aya-ebpf/latest/aya_ebpf/helpers/fn.bpf_probe_read_user_str_bytes.html).
 
 <br>
 
