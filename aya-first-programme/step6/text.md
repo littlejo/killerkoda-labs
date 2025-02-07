@@ -13,8 +13,7 @@ fn try_test_aya(ctx: TracePointContext) -> Result<u32, i64> {
 }
 ```
 
-You can use the function: from_utf8_unchecked
-You can have information about this function: https://doc.rust-lang.org/core/str/fn.from_utf8_unchecked.html
+You can use the `from_utf8_unchecked` function. For more information about this function, you can read the [documentation](https://doc.rust-lang.org/core/str/fn.from_utf8_unchecked.html).
 
 <br>
 
@@ -43,5 +42,5 @@ cargo run
 
 * You must see on the "cargo run" terminal something like:
 ```plain
-[INFO  aya_test] tracepoint sys_enter_execve called, binary name: /bin/ls
+[INFO  aya_test] tracepoint sys_enter_execve called, binary name: /usr/bin/ls
 ```

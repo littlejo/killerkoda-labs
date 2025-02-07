@@ -6,7 +6,7 @@ In this tutorial, you only can use **Editor** tab.
 
 Launch this command in the Terminal at the bottom:
 
-```plain
+```sh
 docker run --rm -it --name aya \
                     --privileged \
                     --network host \
