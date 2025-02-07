@@ -1,1 +1,1 @@
-This tutorial explains how to create an eBPF program with Aya
+This tutorial explains how to create and use eBPF maps with Aya
