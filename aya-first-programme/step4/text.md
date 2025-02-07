@@ -3,7 +3,7 @@ Now you have to improve the code to log which commands are executed.
 You have to modified kernel space program: `aya-test-ebpf/src/main.rs`
 
 Particularly this code:
-```plain
+```rust
 fn try_aya_test(ctx: TracePointContext) -> Result<u32, u32> {
     info!(&ctx, "tracepoint syscalls called");
     Ok(0)
@@ -13,7 +13,7 @@ fn try_aya_test(ctx: TracePointContext) -> Result<u32, u32> {
 
 * The signature of read_at is:
 
-```plain
+```rust
 pub unsafe fn read_at<T>(&self, offset: usize) -> Result<T, i64>
 ```
 
@@ -26,18 +26,18 @@ cat /sys/kernel/debug/tracing/events/syscalls/sys_enter_execve/format
 
 The filename is at the offset 16. So you have to add in try_aya_test function:
 
-```plain
+```rust
 let _filename_src_addr = unsafe {ctx.read_at::<*const u8>(16)?};
 ```{{copy}}
 
 Try to launch `cargo run` but you will have typing error. You have to change return function:
 
-```plain
+```rust
 fn try_test_aya(ctx: TracePointContext) -> Result<u32, i64> { //u32 -> i64
 ```
 
 And modify test_aya function using cast:
-```plain{4}
+```rust{4}
 pub fn test_aya(ctx: TracePointContext) -> u32 {
     match try_test_aya(ctx) {
         Ok(ret) => ret,

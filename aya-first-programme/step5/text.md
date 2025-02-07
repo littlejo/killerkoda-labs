@@ -3,7 +3,7 @@ Now you have to read the address to have the filename byte
 You have to modified kernel space program: `aya-test-ebpf/src/main.rs`
 
 Particularly this code:
-```plain
+```rust
 fn try_test_aya(ctx: TracePointContext) -> Result<u32, i64> {
     let _filename_src_addr = unsafe {ctx.read_at::<*const u8>(16)?};
     info!(&ctx, "tracepoint sys_enter_execve called");
@@ -18,13 +18,13 @@ You can have information about this helper function: https://docs.rs/aya-ebpf/la
 
 The helper function needs a buffer, so you should add:
 
-```plain
+```rust
 let mut buf = [0u8; 16];
 let _filename_bytes :&[u8] = unsafe { aya_ebpf::helpers::bpf_probe_read_user_str_bytes(_filename_src_addr, &mut buf)? };
 ```{{copy}}
 
 * cargo run should work:
-```plain
+```bash
 cd /host/root/aya-test #In the container
 RUST_LOG=info cargo run
 ```{{exec}}

@@ -1,4 +1,4 @@
-Now you have to improve the code to fix the problem of filename cut. Indeed, filename only have 15 characters.
+Now you have to improve the code to fix the problem of filename cut. Indeed, filename only have 15 characters maximum.
 
 You have to modify, this line:
 ```rust
@@ -14,7 +14,10 @@ cd /host/root/aya-examples/tracepoint-binary
 RUST_LOG=info cargo run
 ```{{exec}}
 
-* You should see an error.
+* You should see an error:
+```plain
+ERROR llvm: <unknown>:0:0: in function tracepoint_binary i32 (ptr): Looks like the BPF stack limit is exceeded. Please move large on stack variables into BPF per-cpu array map. For non-kernel uses, the stack can be increased using -mllvm -bpf-stack-size.
+```
   * Why ?
 
 * Solution: an eBPF Map

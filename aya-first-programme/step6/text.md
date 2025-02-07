@@ -3,7 +3,7 @@ Now you have to convert the filename bytes into filename string
 You have to modified kernel space program: `aya-test-ebpf/src/main.rs`
 
 Particularly this code:
-```plain
+```rust
 fn try_test_aya(ctx: TracePointContext) -> Result<u32, i64> {
     let _filename_src_addr = unsafe {ctx.read_at::<*const u8>(16)?};
     let mut buf = [0u8; 16];
@@ -18,7 +18,7 @@ You can have information about this function: https://doc.rust-lang.org/core/str
 
 <br>
 
-```plain
+```rust
 let filename = unsafe { core::str::from_utf8_unchecked(_filename_bytes) };
 ```{{copy}}
 
@@ -29,7 +29,7 @@ info!(&ctx, "tracepoint sys_enter_execve called, binary name: {}", filename);
 
 * Now you can test:
 
-```plain
+```bash
 cargo run
 ```{{exec}}
 
