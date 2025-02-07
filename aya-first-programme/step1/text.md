@@ -1,4 +1,4 @@
-Before coding an eBPF program with Aya, you need to install dependancies. I created an Docker Image for that to save time.
+Before coding an eBPF program with Aya, you need to install dependancies. I created a Docker Image for that to save time.
 
 <br>
 

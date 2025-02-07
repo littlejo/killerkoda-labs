@@ -1,6 +1,6 @@
 {
   "title": "Aya: Your first eBPF maps",
-  "description": "Let's learn how to create and use eBPF maps with Aya",
+  "description": "WIP: Let's learn how to create and use eBPF maps with Aya",
   "details": {
     "intro": {
       "text": "intro.md",

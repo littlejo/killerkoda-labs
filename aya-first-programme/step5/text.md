@@ -1,4 +1,4 @@
-You just retrieved the adress of your filename in the memory.
+You just retrieved the address of your filename in the memory.
 
 Now you have to read the address to have the filename in (bytes format).
 
