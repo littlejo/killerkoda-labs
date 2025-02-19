@@ -24,13 +24,13 @@ Run the following command to information about syscall execve:
 cat /sys/kernel/debug/tracing/events/syscalls/sys_enter_execve/format
 ```{{exec}}
 
-The filename is at the offset **16**. So you have to add in **try_aya_test** function:
+The filename is at the offset **16**. So you have to add in **try_aya_test** function (before the `Ok(0)` line which ends the function):
 
 ```rust
 let _filename_src_addr = unsafe {ctx.read_at::<*const u8>(16)?};
 ```{{copy}}
 
-Try to launch `cargo run` but you will have typing error. You have to change return function:
+Type Ctrl+C and try to launch `cargo run` but you will have typing error. You have to change return function:
 
 ```rust
 fn try_test_aya(ctx: TracePointContext) -> Result<u32, i64> { //u32 -> i64
