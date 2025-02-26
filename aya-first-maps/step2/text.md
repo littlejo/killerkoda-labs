@@ -13,3 +13,12 @@ RUST_LOG=info cargo run
 ```plain
 [INFO  aya_test] tracepoint sys_enter_execve called Binary: $NAME_OF_BINARY
 ```
+
+* On another terminal, launch:
+
+```plain
+/usr/sbin/update-rc.d
+/usr/sbin/usb_modeswitch_dispatcher
+```{{exec}}
+
+* On the editor tab, you must see a bug.
