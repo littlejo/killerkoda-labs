@@ -3,7 +3,7 @@
   "description": "The development labs",
   "items": [
     { "path": "aya-introduction" },
-    { "path": "aya-first-programme" },
+    { "path": "aya-first-program" },
     { "path": "aya-first-maps" }
   ]
 }
