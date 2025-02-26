@@ -17,7 +17,7 @@ To declare you an eBPF map, you can read this [documentation about another eBPF 
 static MAP: CpuMap = CpuMap::with_max_entries(8, 0);
 ```
 
-So for PERCPU_ARRAY
+So for `PERCPU_ARRAY`:
 ```rust
 #[map]
 static BUF: PerCpuArray<[u8; LEN_MAX_PATH]> = PerCpuArray::with_max_entries(1, 0);
@@ -37,3 +37,5 @@ use aya_ebpf::macros::map;
 cd /host/root/aya-examples/tracepoint-binary
 RUST_LOG=info cargo run
 ```{{exec}}
+
+* The map is now created. Now we have to fill up.

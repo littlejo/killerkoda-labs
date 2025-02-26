@@ -21,6 +21,16 @@
         "title": "Test your Aya program limit",
         "text": "step3/text.md",
         "verify": "step3/verify.sh"
+      },
+      {
+        "title": "Test your Aya program limit",
+        "text": "step4/text.md",
+        "verify": "step4/verify.sh"
+      },
+      {
+        "title": "Test your Aya program limit",
+        "text": "step4/text.md",
+        "verify": "step4/verify.sh"
       }
     ],
     "finish": {

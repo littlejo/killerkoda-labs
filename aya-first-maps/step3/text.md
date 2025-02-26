@@ -1,6 +1,6 @@
 Now you have to improve the code to fix the problem of filename cut. Indeed, filename only have 15 characters maximum.
 
-You have to modify, this line:
+You have to modify `tracepoint-binary-ebpf/src/main.rs` file, this line:
 ```rust
 const LEN_MAX_PATH: usize = 16;
 ```
