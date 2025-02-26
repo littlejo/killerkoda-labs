@@ -46,3 +46,5 @@ cargo run
 ```plain
 [INFO  aya_test] tracepoint sys_enter_execve called, binary name: /usr/bin/ls
 ```
+
+![multi-terminal with theia](../../img/screenshot-theia-terminal.png)
