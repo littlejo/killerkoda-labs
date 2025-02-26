@@ -9,28 +9,28 @@
     "steps": [
       {
         "title": "Run docker container",
-        "text": "step1/text.md",
-        "verify": "step1/verify.sh"
+        "text": "intro/step1/text.md",
+        "verify": "intro/step1/verify.sh"
       },
       {
         "title": "Check your Aya program",
-        "text": "step2/text.md",
-        "verify": "step2/verify.sh"
+        "text": "intro/step2/text.md",
+        "verify": "intro/step2/verify.sh"
       },
       {
         "title": "Test your Aya program limit",
-        "text": "step3/text.md",
-        "verify": "step3/verify.sh"
+        "text": "first-map/step1/text.md",
+        "verify": "first-map/step1/verify.sh"
       },
       {
         "title": "Create your first map",
-        "text": "step4/text.md",
-        "verify": "step4/verify.sh"
+        "text": "first-map/step2/text.md",
+        "verify": "first-map/step2/verify.sh"
       },
       {
         "title": "Test your first map",
-        "text": "step5/text.md",
-        "verify": "step5/verify.sh"
+        "text": "first-map/step3/text.md",
+        "verify": "first-map/step3/verify.sh"
       }
     ],
     "finish": {
