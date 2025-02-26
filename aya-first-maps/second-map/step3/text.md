@@ -8,7 +8,7 @@ program.attach("syscalls", "sys_enter_execve")?;
 
 * Add the list of binaries:
 ```rust
-let exclude_list = ["/usr/bin/ls", "/usr/bin/top"];
+let exclude_list = ["/usr/bin/git", "/opt/theia/node"];
 ```{{copy}}
 
 * Retrieve eBPF map in the user environment:
