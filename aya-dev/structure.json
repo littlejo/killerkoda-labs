@@ -1,4 +1,6 @@
 {
+  "title": "Getting started with eBPF with Aya",
+  "description": "This is the development lab",
   "items": [
     { "path": "aya-introduction" },
     { "path": "aya-first-programme" },
