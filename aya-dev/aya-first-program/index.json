@@ -23,7 +23,7 @@
     }
   },
   "backend": {
-    "imageid": "ubuntu-4GB-rapid"
+    "imageid": "ubuntu-4GB"
   },
   "interface": {
     "layout": "ide"
