@@ -15,6 +15,8 @@ fn try_test_aya(ctx: TracePointContext) -> Result<u32, i64> {
 
 You can use the `from_utf8_unchecked` function. For more information about this function, you can read the [documentation](https://doc.rust-lang.org/core/str/fn.from_utf8_unchecked.html).
 
+![alternative from_utf8 uncheck](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/m241449qafet3idsrhju.png)
+
 <br>
 
 ```rust

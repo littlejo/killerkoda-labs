@@ -11,6 +11,8 @@ fn try_aya_test(ctx: TracePointContext) -> Result<u32, u32> {
 ```
 * You can have information about TracePointContext on the [documentation](https://docs.rs/aya-ebpf/latest/aya_ebpf/programs/tracepoint/struct.TracePointContext.html).
 
+![TracePointContext documentation](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fchlr6amdm0uek72ra3j.png)
+
 * The signature of read_at is:
 
 ```rust
@@ -30,7 +32,11 @@ The filename is at the offset **16**. So you have to add in **try_aya_test** fun
 let _filename_src_addr = unsafe {ctx.read_at::<*const u8>(16)?};
 ```{{copy}}
 
-Type Ctrl+C and try to launch `cargo run` but you will have typing error. You have to change return function:
+Type Ctrl+C and try to launch `cargo run` but you will have typing error.
+
+![read_at function documentation](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2r0x4krpygma3mpxabvh.png)
+
+You have to change return function:
 
 ```rust
 fn try_test_aya(ctx: TracePointContext) -> Result<u32, i64> { //u32 -> i64
