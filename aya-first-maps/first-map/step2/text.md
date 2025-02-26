@@ -23,7 +23,9 @@ So for `PERCPU_ARRAY`:
 static BUF: PerCpuArray<[u8; LEN_MAX_PATH]> = PerCpuArray::with_max_entries(1, 0);
 ```{{copy}}
 
-* You just one array of 512 entries.
+* You just one array of 512 entries:
+
+![map of one array of 8 entries](../../img/first-map.png)
 
 * You also need to declare library for that:
 
