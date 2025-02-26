@@ -37,3 +37,10 @@ let filename_bytes = bpf_probe_read_user_str_bytes(filename_src_addr, &mut *buf)
 cd /host/root/tracepoint-binary
 RUST_LOG=info cargo run
 ```{{exec}}
+
+* You can test it! On another terminal, launch:
+
+```plain
+/usr/sbin/update-rc.d
+/usr/sbin/usb_modeswitch_dispatcher
+```{{exec}}
