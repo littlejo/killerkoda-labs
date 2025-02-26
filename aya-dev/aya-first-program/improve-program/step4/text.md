@@ -24,9 +24,9 @@ let filename = unsafe { core::str::from_utf8_unchecked(_filename_bytes) };
 ```{{copy}}
 
 You can change info log like that now:
-```plain
+```rust
 info!(&ctx, "tracepoint sys_enter_execve called, binary name: {}", filename);
-```
+```{{copy}}
 
 * Now you can test:
 

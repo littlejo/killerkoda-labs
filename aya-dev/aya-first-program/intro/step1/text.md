@@ -23,3 +23,4 @@ docker run --rm -it --name aya \
   * Rust Extension Pack
 
 Like that, in Rust code, you will see coloration of syntax.
+![Rust plugin](../../img/plugin.png)

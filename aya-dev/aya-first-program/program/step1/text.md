@@ -20,6 +20,3 @@ Tracepoints are, as the name suggests, places in the Linux code that have been m
 All these points are accessible in the `/sys/kernel/debug/tracing/available_events` file:
 
 ![A slice of this file](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tydi0rmsij9m6bwssvct.png)
-
-They are in the format:
-> [Category]:[Name]
