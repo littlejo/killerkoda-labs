@@ -31,6 +31,26 @@
         "title": "Test your first map",
         "text": "first-map/step3/text.md",
         "verify": "first-map/step3/verify.sh"
+      },
+      {
+        "title": "New feature: binary filter",
+        "text": "second-map/step1/text.md",
+        "verify": "second-map/step1/verify.sh"
+      },
+      {
+        "title": "Create your second map",
+        "text": "second-map/step2/text.md",
+        "verify": "second-map/step2/verify.sh"
+      },
+      {
+        "title": "Fill up your second map",
+        "text": "second-map/step3/text.md",
+        "verify": "second-map/step3/verify.sh"
+      },
+      {
+        "title": "Test your second map",
+        "text": "second-map/step4/text.md",
+        "verify": "second-map/step4/verify.sh"
       }
     ],
     "finish": {

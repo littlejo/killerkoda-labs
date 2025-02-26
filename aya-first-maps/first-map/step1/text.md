@@ -7,7 +7,7 @@ const LEN_MAX_PATH: usize = 16;
 
 Test with the value of **512**.
 
-In the container, run these commands:
+In the container, stop the Aya program (with CTRL-C) and run these commands:
 
 ```plain
 cd /host/root/tracepoint-binary
