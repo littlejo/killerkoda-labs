@@ -4,6 +4,8 @@ This lab is like an addon from [the article from dev.to](https://dev.to/littlejo
 
 <br>
 
+![map architecture](../../img/map-architecture.png)
+
 In this lab, you only can use **Editor** tab. The project directory is `tracepoint-binary`.
 
 Launch this command in the Terminal at the bottom:
