@@ -23,7 +23,7 @@ So for `PERCPU_ARRAY`:
 static BUF: PerCpuArray<[u8; LEN_MAX_PATH]> = PerCpuArray::with_max_entries(1, 0);
 ```{{copy}}
 
-* You just one array of 512 entries:
+* You just one array of 512 entries by CPU:
 
 ![map of one array of 8 entries](../../img/first-map.png)
 
@@ -36,4 +36,4 @@ use aya_ebpf::macros::map;
 
 * The map is now created. Now we have to use it.
 
-This code does not compile yet.
+This code does not compile yet because you need to replace the buffer: `let mut buf = [0u8; LEN_MAX_PATH];`

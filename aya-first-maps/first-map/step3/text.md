@@ -14,6 +14,8 @@ let mut buf = [0u8; LEN_MAX_PATH];
 
 So you need mutable access. So `get_ptr_mut()` method is good for that.
 
+![map of one array of 8 entries (get)](../../img/first-map-2.png)
+
 Change with that:
 
 ```rust
