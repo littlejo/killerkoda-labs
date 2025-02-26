@@ -5,13 +5,13 @@ You have to modified kernel space program: `aya-test-ebpf/src/main.rs`.
 Replace this code:
 
 ```rust
-static BUF: PerCpuArray<[u8; 512]> = PerCpuArray::with_max_entries(1, 0);
+static BUF: PerCpuArray<[u8; LEN_MAX_PATH]> = PerCpuArray::with_max_entries(1, 0);
 ```
 
 by:
 
 ```rust
-static BUF: PerCpuHashMap<u8, [u8; 512]> = PerCpuHashMap::with_max_entries(1, 0);
+static BUF: PerCpuHashMap<u8, [u8; LEN_MAX_PATH]> = PerCpuHashMap::with_max_entries(1, 0);
 ```{{copy}}
 
 Also replace the library:
