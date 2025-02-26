@@ -1,1 +1,1 @@
-Welcome to the eBPF world!
+I hope you enjoy this lab about maps in eBPF
