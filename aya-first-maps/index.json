@@ -53,7 +53,7 @@
         "verify": "second-map/step4/verify.sh"
       },
       {
-        "title": "Explaination of the bug",
+        "title": "Explanation of the bug",
         "text": "fix-bug/step1/text.md",
         "verify": "fix-bug/step1/verify.sh"
       },

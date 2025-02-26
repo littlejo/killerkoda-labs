@@ -1,4 +1,4 @@
-Now you have to Fill up the eBPF map in the user environment
+Now you have to Fill up the eBPF map in the **user environment**.
 
 For that, we have to modify this file: `/root/tracepoint-binary/tracepoint-binary/src/main.rs` after this line:
 

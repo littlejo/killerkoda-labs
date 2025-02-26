@@ -1,5 +1,7 @@
 Now you have to modify the eBPF map for buffer.
 
+![map of one hash](../../img/fix-bug-solution.png)
+
 You have to modified kernel space program: `aya-test-ebpf/src/main.rs`.
 
 Replace this code:
