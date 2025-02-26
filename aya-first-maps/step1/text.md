@@ -1,8 +1,10 @@
-Before coding an eBPF program with Aya, you need to install dependancies. I created an Docker Image for that to save time.
+Before using eBPF maps with Aya, you need to install dependancies. I created an Docker Image for that to save time.
+
+This lab is like an addon from [the article from dev.to](https://dev.to/littlejo/my-first-aya-program-2j0p). If you need more information, please read this article.
 
 <br>
 
-In this tutorial, you only can use **Editor** tab.
+In this lab, you only can use **Editor** tab.
 
 Launch this command in the Terminal at the bottom:
 
