@@ -46,10 +46,10 @@ pub fn test_aya(ctx: TracePointContext) -> u32 {
 }
 ```
 
-* Optional: If you want to see the memory addresses of the filenames, you can add:
+* If you want to see the memory addresses of the filenames, you can replace the info log by:
 ```rust
 info!(&ctx, "tracepoint sys_enter_execve called {:x}", _filename_src_addr as u32);
-```
+```{{copy}}
 
 * Now it should be compiled:
 ```plain

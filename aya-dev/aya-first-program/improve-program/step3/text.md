@@ -8,7 +8,7 @@ Particularly this code:
 ```rust
 fn try_test_aya(ctx: TracePointContext) -> Result<u32, i64> {
     let _filename_src_addr = unsafe {ctx.read_at::<*const u8>(16)?};
-    info!(&ctx, "tracepoint sys_enter_execve called");
+    info!(&ctx, "tracepoint sys_enter_execve called {:x}", _filename_src_addr as u32);
     Ok(0)
 }
 ```{{copy}}
@@ -24,6 +24,12 @@ The helper function needs a buffer, so you should add:
 let mut buf = [0u8; 16];
 let _filename_bytes :&[u8] = unsafe { aya_ebpf::helpers::bpf_probe_read_user_str_bytes(_filename_src_addr, &mut buf)? };
 ```{{copy}}
+
+* If you want to see the filename in bytes, you can replace the info log by:
+```rust
+info!(&ctx, "tracepoint sys_enter_execve called {:x} {:x}", _filename_src_addr as u32, _filename_bytes);
+```{{copy}}
+
 
 * cargo run should work:
 ```bash

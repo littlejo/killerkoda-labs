@@ -8,7 +8,7 @@ fn try_test_aya(ctx: TracePointContext) -> Result<u32, i64> {
     let _filename_src_addr = unsafe {ctx.read_at::<*const u8>(16)?};
     let mut buf = [0u8; 16];
     let _filename_bytes :&[u8] = unsafe { aya_ebpf::helpers::bpf_probe_read_user_str_bytes(filename_src_addr, &mut buf)? };
-    info!(&ctx, "tracepoint sys_enter_execve called");
+    info!(&ctx, "tracepoint sys_enter_execve called {:x} {:x}", _filename_src_addr as u32, _filename_bytes);
     Ok(0)
 }
 ```
@@ -21,7 +21,7 @@ You can use the `from_utf8_unchecked` function. For more information about this 
 let filename = unsafe { core::str::from_utf8_unchecked(_filename_bytes) };
 ```{{copy}}
 
-You can change info macro like that now:
+You can change info log like that now:
 ```plain
 info!(&ctx, "tracepoint sys_enter_execve called, binary name: {}", filename);
 ```
