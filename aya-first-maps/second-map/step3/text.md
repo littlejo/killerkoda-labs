@@ -36,11 +36,6 @@ fn cmd_to_bytes(cmd: &str) -> [u8; 512] {
 }
 ```{{copy}}
 
-* After this line that you just created:
-```rust
-let mut excluded_cmds :HashMap<&mut MapData, [u8; 512], u8> = HashMap::try_from(map)?;
-```
-
 * create a loop to fill up the eBPF map:
 ```rust
 for cmd in exclude_list.iter() {
