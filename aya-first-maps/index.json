@@ -23,14 +23,14 @@
         "verify": "step3/verify.sh"
       },
       {
-        "title": "Test your Aya program limit",
+        "title": "Create your first map",
         "text": "step4/text.md",
         "verify": "step4/verify.sh"
       },
       {
-        "title": "Test your Aya program limit",
-        "text": "step4/text.md",
-        "verify": "step4/verify.sh"
+        "title": "Test your first map",
+        "text": "step5/text.md",
+        "verify": "step5/verify.sh"
       }
     ],
     "finish": {

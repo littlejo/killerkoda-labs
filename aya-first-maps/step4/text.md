@@ -21,7 +21,7 @@ So for `PERCPU_ARRAY`:
 ```rust
 #[map]
 static BUF: PerCpuArray<[u8; LEN_MAX_PATH]> = PerCpuArray::with_max_entries(1, 0);
-```
+```{{copy}}
 
 * You just one array 512 entries.
 
@@ -30,12 +30,6 @@ static BUF: PerCpuArray<[u8; LEN_MAX_PATH]> = PerCpuArray::with_max_entries(1, 0
 ```rust
 use aya_ebpf::maps::PerCpuArray;
 use aya_ebpf::macros::map;
-```
+```{{copy}}
 
-* Now it should be compiled:
-```bash
-cd /host/root/aya-examples/tracepoint-binary
-RUST_LOG=info cargo run
-```{{exec}}
-
-* The map is now created. Now we have to fill up.
+* The map is now created. Now we have to use it.
