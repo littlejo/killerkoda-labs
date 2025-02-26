@@ -17,7 +17,7 @@ static EXCLUDED_CMDS: HashMap<[u8; 512], u8> = HashMap::with_max_entries(10, 0);
 
 You need to add library:
 ```rust
-use aya::maps::HashMap;
+use aya_ebpf::maps::HashMap;
 ```{{copy}}
 
 * Now it should be compiled:
