@@ -1,3 +1,3 @@
 #!/bin/bash
 
-stat /root/aya-examples/tracepoint-binary/target/debug/tracepoint-binary
+stat /root/tracepoint-binary/target/debug/tracepoint-binary

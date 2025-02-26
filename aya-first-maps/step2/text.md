@@ -5,7 +5,7 @@ Test the eBPF program:
 In the container, run these commands:
 
 ```plain
-cd /host/root/aya-examples/tracepoint-binary
+cd /host/root/tracepoint-binary
 RUST_LOG=info cargo run
 ```{{exec}}
 
