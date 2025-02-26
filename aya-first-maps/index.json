@@ -51,6 +51,16 @@
         "title": "Test your second map",
         "text": "second-map/step4/text.md",
         "verify": "second-map/step4/verify.sh"
+      },
+      {
+        "title": "Explaination of the bug",
+        "text": "fix-bug/step1/text.md",
+        "verify": "fix-bug/step1/verify.sh"
+      },
+      {
+        "title": "Fix the bug",
+        "text": "fix-bug/step2/text.md",
+        "verify": "fix-bug/step2/verify.sh"
       }
     ],
     "finish": {
