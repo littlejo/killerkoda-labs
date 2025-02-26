@@ -2,7 +2,7 @@ Now you have to Create an eBPF map with the list of binaries
 
 For that, we have to think which type of eBPF map we have to choose.
 
-There is 2 types of eBPF for configuration (just one write and many reads):
+There are 2 types of eBPF for configuration (just one write and many reads):
 * Array of list of binaries:  Array<[u8; 512]>
 
 ![map of four entries of arrays of 8 entries](../../img/second-map-array.png)

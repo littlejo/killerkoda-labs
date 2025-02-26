@@ -50,7 +50,7 @@ by:
 let buf = BUF.get_ptr_mut(&0).ok_or(0)?;
 ```{{copy}}
 
-* It should works now:
+* It should work now:
 ```bash
 cd /host/root/tracepoint-binary
 RUST_LOG=info cargo run
