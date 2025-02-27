@@ -1,0 +1,56 @@
+{
+  "title": "Aya: Your first program",
+  "description": "Let's learn how to code with Aya",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "steps": [
+      {
+        "title": "Run docker container",
+        "text": "intro/step1/text.md",
+        "verify": "intro/step1/verify.sh"
+      },
+      {
+        "title": "Generate your Aya project",
+        "text": "program/step1/text.md",
+        "verify": "program/step1/verify.sh"
+      },
+      {
+        "title": "Check your Aya program",
+        "text": "program/step2/text.md",
+        "verify": "program/step2/verify.sh"
+      },
+      {
+        "title": "Coding: Which files to modify?",
+        "text": "improve-program/step1/text.md",
+        "verify": "improve-program/step1/verify.sh"
+      },
+      {
+        "title": "Coding: Retrieve filename address",
+        "text": "improve-program/step2/text.md",
+        "verify": "improve-program/step2/verify.sh"
+      },
+      {
+        "title": "Coding: Read the address to have filename bytes",
+        "text": "improve-program/step3/text.md",
+        "verify": "improve-program/step3/verify.sh"
+      },
+      {
+        "title": "Coding: Convert filename bytes into filename string",
+        "text": "improve-program/step4/text.md",
+        "verify": "improve-program/step4/verify.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu-4GB-rapid"
+  },
+  "interface": {
+    "layout": "ide"
+  }
+}
