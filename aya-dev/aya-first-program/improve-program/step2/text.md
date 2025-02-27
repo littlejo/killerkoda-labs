@@ -5,6 +5,7 @@ You have to modified kernel space program: `aya-test-ebpf/src/main.rs`
 Particularly this code:
 ```rust
 fn try_aya_test(ctx: TracePointContext) -> Result<u32, u32> {
+    //You have to add something here
     info!(&ctx, "tracepoint syscalls called");
     Ok(0)
 }
@@ -36,13 +37,13 @@ Type Ctrl+C and try to launch `cargo run`{{exec interrupt}} but you will have ty
 
 ![read_at function documentation](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2r0x4krpygma3mpxabvh.png)
 
-You have to change return function:
+You have to change the return function:
 
 ```rust
 fn try_test_aya(ctx: TracePointContext) -> Result<u32, i64> { //u32 -> i64
 ```
 
-And modify test_aya function using cast:
+And modify `test_aya()` function using cast:
 ```rust{4}
 pub fn test_aya(ctx: TracePointContext) -> u32 {
     match try_test_aya(ctx) {

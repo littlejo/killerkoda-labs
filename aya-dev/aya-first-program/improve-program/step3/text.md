@@ -8,6 +8,7 @@ Particularly this code:
 ```rust
 fn try_test_aya(ctx: TracePointContext) -> Result<u32, i64> {
     let _filename_src_addr = unsafe {ctx.read_at::<*const u8>(16)?};
+    //You have to add something here
     info!(&ctx, "tracepoint sys_enter_execve called {:x}", _filename_src_addr as u32);
     Ok(0)
 }
