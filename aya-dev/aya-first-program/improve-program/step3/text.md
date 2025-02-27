@@ -37,4 +37,8 @@ info!(&ctx, "tracepoint sys_enter_execve called {:x} {:x}", _filename_src_addr a
 ```bash
 cd /host/root/aya-test #In the container
 RUST_LOG=info cargo run
-```{{exec}}
+```{{exec interrupt}}
+
+You should see something like this:
+
+![output of cargo run](../../img/aya-output-bytes.png)
