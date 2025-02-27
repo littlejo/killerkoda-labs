@@ -26,7 +26,7 @@ Run the following command to information about syscall execve:
 cat /sys/kernel/debug/tracing/events/syscalls/sys_enter_execve/format
 ```{{exec interrupt}}
 
-The filename is at the offset **16**. So you have to add in **try_aya_test** function (before the `info!(...)`:
+The filename is at the offset **16**. So you have to add in `try_aya_test()` function (before the `info!(...)` line:
 
 ```rust
 let _filename_src_addr = unsafe {ctx.read_at::<*const u8>(16)?};
