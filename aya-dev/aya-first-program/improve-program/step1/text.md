@@ -12,3 +12,5 @@ For this tutorial, you only need to modify **kernel space program**.
 To edit the code, you need a text editor. You can use the **Editor** tab:
 * Select the `aya-test` directory
 * Navigate to `aya-test-ebpf/src/main.rs`
+
+![Thea explorer](../../img/screenshot-theia-explorer.png)
