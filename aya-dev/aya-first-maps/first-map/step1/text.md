@@ -1,6 +1,15 @@
 Now you have to improve the code to fix the problem of filename cut. Indeed, filename only have 15 characters maximum.
 
-You have to modify `/root/tracepoint-binary/tracepoint-binary-ebpf/src/main.rs` file, this line:
+For that, you need to modify **kernel space** of eBPF program.
+
+To edit the code, you need a text editor. You can use the **Editor** tab:
+* Select the `tracepoint-binary` directory
+* Navigate to `tracepoint-binary-ebpf/src/main.rs`
+
+![Screenshot of explorer](../../img/screenshot-explorer.png)
+
+
+* Modify this line:
 ```rust
 const LEN_MAX_PATH: usize = 16;
 ```

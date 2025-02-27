@@ -22,3 +22,5 @@ RUST_LOG=info cargo run
 ```{{exec}}
 
 * On the editor tab, you must see a bug.
+
+![screenshot of the terminals](../../img/screenshot-bug.png)

@@ -1,7 +1,5 @@
 Before using eBPF maps with Aya, you need to install dependancies. I created an Docker Image for that to save time.
 
-This lab is like an addon from [the article from dev.to](https://dev.to/littlejo/my-first-aya-program-2j0p). If you need more information, please read this article.
-
 <br>
 
 ![map architecture](../../img/map-architecture.png)
@@ -27,3 +25,8 @@ docker run --rm -it --name aya \
   * Rust Extension Pack
 
 Like that, in Rust code, you will see coloration of syntax.
+![Rust plugin](../../img/plugin.png)
+
+If you have time, you also can read the article: CHANGE_ME
+
+![screenshot of the article](../../img/aya-article.png)
