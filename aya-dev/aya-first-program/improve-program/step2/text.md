@@ -24,15 +24,15 @@ pub unsafe fn read_at<T>(&self, offset: usize) -> Result<T, i64>
 Run the following command to information about syscall execve:
 ```plain
 cat /sys/kernel/debug/tracing/events/syscalls/sys_enter_execve/format
-```{{exec}}
+```{{exec interrupt}}
 
-The filename is at the offset **16**. So you have to add in **try_aya_test** function (before the `Ok(0)` line which ends the function):
+The filename is at the offset **16**. So you have to add in **try_aya_test** function (before the `info!(...)`:
 
 ```rust
 let _filename_src_addr = unsafe {ctx.read_at::<*const u8>(16)?};
 ```{{copy}}
 
-Type Ctrl+C and try to launch `cargo run` but you will have typing error.
+Type Ctrl+C and try to launch `cargo run`{{exec interrupt}} but you will have typing error.
 
 ![read_at function documentation](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2r0x4krpygma3mpxabvh.png)
 
@@ -61,4 +61,4 @@ info!(&ctx, "tracepoint sys_enter_execve called {:x}", _filename_src_addr as u32
 ```plain
 cd /host/root/aya-test #In the container
 RUST_LOG=info cargo run
-```{{exec}}
+```{{exec interrupt}}
