@@ -27,6 +27,6 @@ docker run --rm -it --name aya \
 Like that, in Rust code, you will see coloration of syntax.
 ![Rust plugin](../../img/plugin.png)
 
-If you have time, you also can read the article: CHANGE_ME
+If you have time, you can also read the article: CHANGE_ME
 
 ![screenshot of the article](../../img/aya-article.png)
