@@ -48,4 +48,6 @@ for cmd in exclude_list.iter() {
 ```bash
 cd /host/root/tracepoint-binary
 RUST_LOG=info cargo run
-```{{exec}}
+```{{exec interrupt}}
+
+* Nothing changed in the log! You just filled the eBPF map.

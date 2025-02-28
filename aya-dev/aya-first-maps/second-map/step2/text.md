@@ -3,11 +3,11 @@ Now you have to Create an eBPF map with the list of binaries
 For that, we have to think which type of eBPF map we have to choose.
 
 There are 2 types of eBPF for configuration (just one write and many reads):
-* Array of list of binaries:  Array<[u8; 512]>
+* Array of list of binaries:  `Array<[u8; 512]>`
 
 ![map of four entries of arrays of 8 entries](../../img/second-map-array.png)
 
-* HashMap of list of binaries in key: HashMap<[u8; 512], u8>
+* HashMap of list of binaries in key: `HashMap<[u8; 512], u8>`
 
 ![map of four keys of hash](../../img/second-map-hash.png)
 
@@ -29,4 +29,6 @@ use aya_ebpf::maps::HashMap;
 ```bash
 cd /host/root/tracepoint-binary
 RUST_LOG=info cargo run
-```{{exec}}
+```{{exec interrupt}}
+
+Nothing changed for the log! You just created a map. That's all!

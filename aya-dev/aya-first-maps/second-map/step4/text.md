@@ -28,5 +28,4 @@ RUST_LOG=info cargo run
 [INFO  tracepoint_binary] No log for this Binary
 [INFO  tracepoint_binary] tracepoint sys_enter_execve called. Binary: /usr/bin/git
 ```
-
 * Did you find the bug?

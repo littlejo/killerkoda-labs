@@ -38,7 +38,7 @@ let filename_bytes = bpf_probe_read_user_str_bytes(filename_src_addr, &mut *buf)
 ```bash
 cd /host/root/tracepoint-binary
 RUST_LOG=info cargo run
-```{{exec}}
+```{{exec interrupt}}
 
 * You can test it! On another terminal, launch:
 

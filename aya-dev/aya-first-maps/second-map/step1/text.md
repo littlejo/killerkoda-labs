@@ -1,4 +1,6 @@
-Now you have to add a new feature: You create a filter not to log some binaries.
+You need to add a new feature: create a filter to exclude logs from certain binaries:
+* `/usr/bin/git`
+* `/opt/theia/node`
 
 How to do this ?
 
