@@ -5,5 +5,9 @@ You need to add a new feature: create a filter to exclude logs from certain bina
 How to do this ?
 
 * Kernel environment: Create an eBPF map with the list of binaries
+* User environment: Retrieve the map
 * User environment: Fill up the eBPF map
-* Kernel environment: Create a check if the binary is in the list
+* Kernel environment: Retrieve the map content
+* Kernel environment: Create a check if the binary is in the map content
+
+![Screenshot of explorer](../../img/map-workflow.png)
