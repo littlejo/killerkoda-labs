@@ -1,3 +1,6 @@
+![work flow of map: create a map](../../img/map-workflow-1.png)
+
+
 Now you have to Create an eBPF map with the list of binaries
 
 For that, we have to think which type of eBPF map we have to choose.

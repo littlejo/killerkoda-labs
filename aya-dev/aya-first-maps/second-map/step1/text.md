@@ -10,4 +10,4 @@ How to do this ?
 * Kernel environment: Retrieve the map content
 * Kernel environment: Create a check if the binary is in the map content
 
-![Screenshot of explorer](../../img/map-workflow.png)
+![map workflow](../../img/map-workflow.png)
