@@ -1,3 +1,5 @@
+![work flow of map: input](../../img/map-workflow-5.png)
+
 Now you have to Create a check in the kernel environment if the binary is in the list
 
 For that, we have to modify this file: `/root/tracepoint-binary/tracepoint-binary-ebpf/src/main.rs`
