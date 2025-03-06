@@ -22,7 +22,7 @@ Change with that:
 let buf = BUF.get_ptr_mut(0).ok_or(0)?;
 ```{{copy}}
 
-so the type of buf is `*mut [0u8; LEN_MAX_PATH]`. It's quite different from previously.
+so the type of buf is `*mut [u8; LEN_MAX_PATH]`. It's quite different from previously.
 
 You need to deference this variable. So you have add a `*` to buf. For that, you need to modify this line :
 ```rust
