@@ -16,6 +16,10 @@ RUST_LOG=info cargo run
 [INFO  aya_test] tracepoint sys_enter_execve called Binary: $NAME_OF_BINARY
 ```
 
+* You can click on this icon to split terminal:
+
+![screenshot of split terminal](../../img/screenshot-split.png)
+
 * On another terminal, launch:
 
 ```plain
