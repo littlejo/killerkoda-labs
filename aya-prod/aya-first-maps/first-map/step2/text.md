@@ -11,7 +11,7 @@ const FILENAME_OFFSET: usize = 16;
 
 You have to add eBPF map.
 
-To declare you an eBPF map, you can read this [documentation about another eBPF map](https://docs.rs/aya-ebpf/latest/aya_ebpf/maps/xdp/struct.CpuMap.html):
+To declare you an eBPF map, you can read this [documentation about another type of eBPF map](https://docs.rs/aya-ebpf/latest/aya_ebpf/maps/xdp/struct.CpuMap.html):
 ```rust
 #[map]
 static MAP: CpuMap = CpuMap::with_max_entries(8, 0);

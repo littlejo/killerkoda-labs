@@ -1,6 +1,6 @@
 {
-  "title": "Aya: Your first eBPF maps",
-  "description": "WIP: Let's learn how to create and use eBPF maps with Aya",
+  "title": "Enhancing your Aya program with eBPF maps",
+  "description": "Let's learn how to create and use eBPF maps with Aya",
   "details": {
     "intro": {
       "text": "intro.md",
@@ -68,7 +68,7 @@
     }
   },
   "backend": {
-    "imageid": "ubuntu-4GB"
+    "imageid": "ubuntu-4GB-rapid"
   },
   "interface": {
     "layout": "ide"

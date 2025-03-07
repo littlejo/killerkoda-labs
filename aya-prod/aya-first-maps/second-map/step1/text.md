@@ -1,7 +1,13 @@
-Now you have to add a new feature: You create a filter not to log some binaries.
+You need to add a new feature: create a filter to exclude logs from certain binaries:
+* `/usr/bin/git`
+* `/opt/theia/node`
 
 How to do this ?
 
 * Kernel environment: Create an eBPF map with the list of binaries
+* User environment: Retrieve the map
 * User environment: Fill up the eBPF map
-* Kernel environment: Create a check if the binary is in the list
+* Kernel environment: Retrieve the map content
+* Kernel environment: Create a check if the binary is in the map content
+
+![map workflow](../../img/map-workflow.png)

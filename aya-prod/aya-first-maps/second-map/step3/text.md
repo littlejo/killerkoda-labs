@@ -1,15 +1,21 @@
-Now you have to Fill up the eBPF map in the **user environment**.
+Now you have to fill up the eBPF map in the **user environment**.
 
-For that, we have to modify this file: `/root/tracepoint-binary/tracepoint-binary/src/main.rs` after this line:
+![Screenshot user code](../../img/screenshot-user.png)
+
+For that, you have to modify this file: `tracepoint-binary/src/main.rs` after this line:
 
 ```rust
 program.attach("syscalls", "sys_enter_execve")?;
 ```
 
+![work flow of map: input](../../img/map-workflow-4.png)
+
 * Add the list of binaries:
 ```rust
 let exclude_list = ["/usr/bin/git", "/opt/theia/node"];
 ```{{copy}}
+
+![work flow of map: retrieve map](../../img/map-workflow-2.png)
 
 * Retrieve eBPF map in the user environment:
 ```rust
@@ -22,6 +28,8 @@ You need to add libraries at the beginning of the file:
 ```rust
 use aya::maps::{HashMap, MapData};
 ```{{copy}}
+
+![work flow of map: retrieve map](../../img/map-workflow-3.png)
 
 * You need to create a function to convert a command into a list of bytes and zeros of length 512.
 * You can add this code at the end of the file:
@@ -36,7 +44,7 @@ fn cmd_to_bytes(cmd: &str) -> [u8; 512] {
 }
 ```{{copy}}
 
-* create a loop to fill up the eBPF map:
+* create a loop to fill up the eBPF map, add this code after `//fill up the map`:
 ```rust
 for cmd in exclude_list.iter() {
         let cmd_zero = cmd_to_bytes(cmd);
@@ -44,8 +52,13 @@ for cmd in exclude_list.iter() {
 }
 ```{{copy}}
 
+So the main change:
+![main change screenshot](../../img/screenshot-mainchange.png)
+
 * Now it should be compiled:
 ```bash
 cd /host/root/tracepoint-binary
 RUST_LOG=info cargo run
-```{{exec}}
+```{{exec interrupt}}
+
+* Nothing changed in the log! You just filled the eBPF map.
