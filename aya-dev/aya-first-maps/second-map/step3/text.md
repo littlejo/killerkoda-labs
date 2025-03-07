@@ -1,5 +1,7 @@
 Now you have to fill up the eBPF map in the **user environment**.
 
+![Screenshot user code](../../img/screenshot-user.png)
+
 For that, you have to modify this file: `tracepoint-binary/src/main.rs` after this line:
 
 ```rust
