@@ -24,7 +24,7 @@ let buf = BUF.get_ptr_mut(0).ok_or(0)?;
 
 so the type of buf is `*mut [u8; LEN_MAX_PATH]`. It's quite different from previously.
 
-You need to deference this variable. So you have add a `*` to buf. For that, you need to modify this line :
+You need to deference this variable. So you have add a `*` to `buf`. For that, you need to modify this line :
 ```rust
 let filename_bytes = bpf_probe_read_user_str_bytes(filename_src_addr, &mut buf)?;
 ```
