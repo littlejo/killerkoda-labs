@@ -13,7 +13,7 @@ program.attach("syscalls", "sys_enter_execve")?;
 let exclude_list = ["/usr/bin/git", "/opt/theia/node"];
 ```{{copy}}
 
-![work flow of map: retrieve map](../../img/map-workflow-3.png)
+![work flow of map: retrieve map](../../img/map-workflow-2.png)
 
 * Retrieve eBPF map in the user environment:
 ```rust
@@ -27,7 +27,7 @@ You need to add libraries at the beginning of the file:
 use aya::maps::{HashMap, MapData};
 ```{{copy}}
 
-![work flow of map: retrieve map](../../img/map-workflow-2.png)
+![work flow of map: retrieve map](../../img/map-workflow-3.png)
 
 * You need to create a function to convert a command into a list of bytes and zeros of length 512.
 * You can add this code at the end of the file:
