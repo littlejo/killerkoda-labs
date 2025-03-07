@@ -1,8 +1,8 @@
 ![work flow of map: input](../../img/map-workflow-5.png)
 
-Now you have to Create a check in the kernel environment if the binary is in the list
+Now you have to create a check in the **kernel environment** if the binary is in the list
 
-For that, we have to modify this file: `/root/tracepoint-binary/tracepoint-binary-ebpf/src/main.rs`
+For that, we have to modify this file: `tracepoint-binary-ebpf/src/main.rs`
 
 * Add these lines:
 ```rust
@@ -20,7 +20,7 @@ cd /host/root/tracepoint-binary
 RUST_LOG=info cargo run
 ```{{exec}}
 
-* It works but not totally:
+* It can work but not totally:
 ```
 [INFO  tracepoint_binary] No log for this Binary
 [INFO  tracepoint_binary] No log for this Binary

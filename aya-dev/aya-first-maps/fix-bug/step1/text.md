@@ -12,4 +12,4 @@ So what is the problem?
 
 ![map of one array of 16 entries after two commands](../../img/fix-bug-explain-2.png)
 
-So you need to find a solution to reset the buffer before each launching. The type of the buffer can't do that. So you need to change with a Hash map.
+So you need to find a solution to reset the buffer before each launching.
