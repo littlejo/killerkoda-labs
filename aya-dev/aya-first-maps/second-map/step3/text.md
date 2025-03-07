@@ -1,6 +1,6 @@
-Now you have to Fill up the eBPF map in the **user environment**.
+Now you have to fill up the eBPF map in the **user environment**.
 
-For that, we have to modify this file: `/root/tracepoint-binary/tracepoint-binary/src/main.rs` after this line:
+For that, you have to modify this file: `tracepoint-binary/src/main.rs` after this line:
 
 ```rust
 program.attach("syscalls", "sys_enter_execve")?;
@@ -42,13 +42,16 @@ fn cmd_to_bytes(cmd: &str) -> [u8; 512] {
 }
 ```{{copy}}
 
-* create a loop to fill up the eBPF map:
+* create a loop to fill up the eBPF map, add this code after `//fill up the map`:
 ```rust
 for cmd in exclude_list.iter() {
         let cmd_zero = cmd_to_bytes(cmd);
         excluded_cmds.insert(cmd_zero, 1, 0)?;
 }
 ```{{copy}}
+
+So the main change:
+![main change screenshot](../../img/screenshot-mainchange.png)
 
 * Now it should be compiled:
 ```bash

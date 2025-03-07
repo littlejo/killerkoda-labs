@@ -1,7 +1,6 @@
 ![work flow of map: create a map](../../img/map-workflow-1.png)
 
-
-Now you have to Create an eBPF map with the list of binaries
+Now you have to create an eBPF map with the list of binaries
 
 For that, we have to think which type of eBPF map we have to choose.
 
@@ -17,7 +16,7 @@ There are 2 types of eBPF for configuration (just one write and many reads):
 Array is not a good option for the check if binary is in the list because it's **O(n)**
 HashMap is the good option because for the check if binary is in the hashmap is in **O(1)**
 
-You have to add this line with the other map in the `/root/tracepoint-binary/tracepoint-binary-ebpf/src/main.rs` file:
+You have to add this line after the other map in the `tracepoint-binary-ebpf/src/main.rs` file:
 ```rust
 #[map]
 static EXCLUDED_CMDS: HashMap<[u8; 512], u8> = HashMap::with_max_entries(10, 0);
