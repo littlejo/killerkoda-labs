@@ -46,3 +46,5 @@ RUST_LOG=info cargo run
 /usr/sbin/update-rc.d
 /usr/sbin/usb_modeswitch_dispatcher
 ```{{exec}}
+
+![screenshot with some path greater than 16](../../img/screenshot-fix-bug.png)
