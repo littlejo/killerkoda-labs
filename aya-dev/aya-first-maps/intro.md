@@ -1,4 +1,4 @@
-This tutorial explains how to create and use eBPF maps with Aya
+This tutorial explains how to create and use eBPF maps with Aya.
 
 If you need more information, you can read the article: #CHANGE_ME
 
