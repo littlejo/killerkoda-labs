@@ -12,7 +12,7 @@ if EXCLUDED_CMDS.get(& *buf).is_some() {
 }
 ```{{copy}}
 
-before this lines: `from_utf8_unchecked(filename_bytes)`
+before this line: `from_utf8_unchecked(filename_bytes)`
 
 * Now it should be compiled:
 ```bash
