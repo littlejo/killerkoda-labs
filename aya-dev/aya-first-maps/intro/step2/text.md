@@ -1,17 +1,15 @@
-Test the eBPF program:
-
-<br>
-
-In the container, run these commands:
+Test the eBPF program before making any modifications... In the container, run these commands:
 
 ```plain
 cd /host/root/tracepoint-binary
 RUST_LOG=info cargo run
 ```{{exec}}
 
+![screenshot of command](../../img/screenshot-command.png)
+
 * It can take a long time. In addition to the article, you also can read [documentation about eBPF maps](https://docs.ebpf.io/linux/concepts/maps/):
 
-![screenshot of the article](../../img/doc-ebpf-maps.png)
+![screenshot of documentation](../../img/doc-ebpf-maps.png)
 
 * When you see: "Waiting for Ctrl-C...", You must see on the terminal:
 ```plain
