@@ -13,8 +13,7 @@ There are 2 types of eBPF maps for configuration (just one write and many reads)
 
 ![map of four keys of hash](../../img/second-map-hash.png)
 
-Array is not a good option for the check if binary is in the list because it's **O(n)**
-HashMap is the good option because for the check if binary is in the hashmap is in **O(1)**
+Using an array to check if a binary is in the list is inefficient because it requires a loop, making it **O(n)**. A HashMap is a better choice, as lookups are **O(1)**.
 
 You have to add this line after the other map in the `tracepoint-binary-ebpf/src/main.rs` file:
 ```rust
