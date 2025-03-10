@@ -1,4 +1,4 @@
-Now you have to improve the code to fix the problem of filename cut. Indeed, filename only have 15 characters maximum.
+Now you have to improve the code to fix the issue of truncated filenames. Indeed, filename only have 15 characters maximum.
 
 For that, you need to modify **kernel space** of eBPF program.
 
