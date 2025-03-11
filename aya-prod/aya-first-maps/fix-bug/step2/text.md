@@ -1,6 +1,6 @@
 You have to modified kernel space program: `aya-test-ebpf/src/main.rs`.
 
-You need to reset the buf map. after `unsafe {` line, add this line: 
+You need to reset the buf map. after `let filename = unsafe {` line, add this line:
 
 ```rust
 *buf = [0u8; 512];

@@ -18,7 +18,7 @@ before this line: `from_utf8_unchecked(filename_bytes)`
 ```bash
 cd /host/root/tracepoint-binary
 RUST_LOG=info cargo run
-```{{exec}}
+```{{exec interrupt}}
 
 * It can work but not totally:
 ```
