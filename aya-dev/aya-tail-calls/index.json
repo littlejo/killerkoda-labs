@@ -16,6 +16,16 @@
         "title": "Check your Aya program",
         "text": "intro/step2/text.md",
         "verify": "intro/step2/verify.sh"
+      },
+      {
+        "title": "Restructure: common.rs",
+        "text": "restructure/step1/text.md",
+        "verify": "restructure/step1/verify.sh"
+      },
+      {
+        "title": "Restructure: hook.rs",
+        "text": "restructure/step2/text.md",
+        "verify": "restructure/step2/verify.sh"
       }
     ],
     "finish": {
