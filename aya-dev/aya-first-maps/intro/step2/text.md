@@ -7,7 +7,7 @@ RUST_LOG=info cargo run
 
 ![screenshot of command](../../img/screenshot-command.png)
 
-* It can take a long time. In addition to the article, you also can read [documentation about eBPF maps](https://docs.ebpf.io/linux/concepts/maps/):
+* It can take a long time. In addition to [the article](https://dev.to/littlejo/enhancing-your-aya-program-with-ebpf-maps-4hdj), you also can read [documentation about eBPF maps](https://docs.ebpf.io/linux/concepts/maps/):
 
 ![screenshot of documentation](../../img/doc-ebpf-maps.png)
 
