@@ -1,0 +1,31 @@
+{
+  "title": "Enhancing your Aya program with eBPF maps",
+  "description": "Let's learn how to create and use eBPF maps with Aya",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "steps": [
+      {
+        "title": "Run docker container",
+        "text": "intro/step1/text.md",
+        "verify": "intro/step1/verify.sh"
+      },
+      {
+        "title": "Check your Aya program",
+        "text": "intro/step2/text.md",
+        "verify": "intro/step2/verify.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu-4GB-rapid"
+  },
+  "interface": {
+    "layout": "ide"
+  }
+}
