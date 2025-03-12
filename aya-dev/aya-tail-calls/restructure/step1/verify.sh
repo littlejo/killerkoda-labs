@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker container ls -f name=aya -q | wc -l | grep '^1$'
+stat /root/project/tracepoint-binary-ebpf/src/common.rs

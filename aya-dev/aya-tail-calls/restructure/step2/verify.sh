@@ -1,3 +1,3 @@
 #!/bin/bash
 
-stat /root/tracepoint-binary/target/debug/tracepoint-binary
+stat /root/project/tracepoint-binary-ebpf/src/hook.rs

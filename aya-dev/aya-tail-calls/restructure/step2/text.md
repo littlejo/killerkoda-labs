@@ -57,3 +57,11 @@ fn panic(_info: &core::panic::PanicInfo) -> ! {
     loop {}
 }
 ```{{copy}}
+
+Your code has to compile:
+
+```plain
+cd /host/root/project
+RUST_LOG=info cargo run
+```{{exec}}
+
