@@ -1,6 +1,6 @@
 {
-  "title": "Enhancing your Aya program with eBPF maps",
-  "description": "Let's learn how to create and use eBPF maps with Aya",
+  "title": "Modularizing Your Aya Programs with Tail Calls",
+  "description": "Let's learn how to create and use tail calls with Aya",
   "details": {
     "intro": {
       "text": "intro.md",
