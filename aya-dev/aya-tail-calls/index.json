@@ -1,5 +1,5 @@
 {
-  "title": "Modularizing Your Aya Programs with Tail Calls",
+  "title": "Modularizing Your Aya Program with Tail Calls",
   "description": "Let's learn how to create and use tail calls with Aya",
   "details": {
     "intro": {
