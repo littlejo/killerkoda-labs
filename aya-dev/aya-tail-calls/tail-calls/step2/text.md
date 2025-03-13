@@ -18,11 +18,6 @@ fn try_tracepoint_binary_filter(ctx: TracePointContext) -> Result<u32, i64> {
 }
 ```{{copy}}
 
-Don't forget to add library:
-
-```rust
-use aya_log_ebpf::debug;
-```{{copy}}
 
 You need to add jump to the display program:
 
@@ -31,6 +26,12 @@ let res = unsafe { JUMP_TABLE.tail_call(&ctx, 1) };
 if res.is_err() {
     error!(&ctx, "filter: tail_call failed");
 }
+```{{copy}}
+
+Don't forget to add library:
+
+```rust
+use aya_log_ebpf::{debug,error};
 ```{{copy}}
 
 ```plain
