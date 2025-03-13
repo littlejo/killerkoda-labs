@@ -14,7 +14,7 @@ docker run --rm -it --name aya \
                     -e RUST_LOG=info \
                     -v /:/host \
                     -v /sys/kernel/debug:/sys/kernel/debug \
-                    littlejo/aya:slim-cache bash
+                    littlejo/aya:slim-new-cache bash
 ```{{exec}}
 
 * It can take a long time. During this time, you can install Rust extensions (in the OPEN VSX Registry) for the Editor:
