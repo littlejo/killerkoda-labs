@@ -27,6 +27,21 @@
         "title": "Restructure: hook.rs",
         "text": "restructure/step2/text.md",
         "verify": "restructure/step2/verify.sh"
+      },
+      {
+        "title": "Foundation: create map",
+        "text": "foundation/step1/text.md",
+        "verify": "foundation/step1/verify.sh"
+      },
+      {
+        "title": "Foundation: create programs",
+        "text": "foundation/step2/text.md",
+        "verify": "foundation/step2/verify.sh"
+      },
+      {
+        "title": "Foundation: Load programs and fill the map",
+        "text": "foundation/step3/text.md",
+        "verify": "foundation/step3/verify.sh"
       }
     ],
     "finish": {
