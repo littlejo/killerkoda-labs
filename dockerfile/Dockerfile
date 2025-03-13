@@ -23,5 +23,8 @@ RUN cargo build
 FROM base as final
 ENV CARGO_TARGET_DIR=/root/build-cache
 ENV CARGO_HOME=/root/cargo-home
+ENV USER=littlejo
+ENV RUST_LOG=info
+
 COPY --from=builder /root/build-cache /root/build-cache
 COPY --from=builder /root/cargo-home /root/cargo-home
