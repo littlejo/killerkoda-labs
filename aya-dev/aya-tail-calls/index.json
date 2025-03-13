@@ -42,6 +42,21 @@
         "title": "Foundation: Load programs and fill the map",
         "text": "foundation/step3/text.md",
         "verify": "foundation/step3/verify.sh"
+      },
+      {
+        "title": "Tail calls: Modify hook.rs",
+        "text": "tail-calls/step1/text.md",
+        "verify": "tail-calls/step1/verify.sh"
+      },
+      {
+        "title": "Tail calls: Modify filter.rs",
+        "text": "tail-calls/step2/text.md",
+        "verify": "tail-calls/step2/verify.sh"
+      },
+      {
+        "title": "Tail calls: Modify display.rs",
+        "text": "tail-calls/step3/text.md",
+        "verify": "tail-calls/step3/verify.sh"
       }
     ],
     "finish": {
