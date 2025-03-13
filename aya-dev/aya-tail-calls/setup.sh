@@ -11,4 +11,4 @@ rm -rf aya-examples
 
 echo 'pub const EXCLUDE_LIST: [&str; 2] = ["/usr/bin/git", "/opt/theia/node"];' > $project_dir/tracepoint-binary/src/constant.rs
 
-docker pull littlejo/aya:slim-new-cache
+docker pull littlejo/aya:slim-cache-cache

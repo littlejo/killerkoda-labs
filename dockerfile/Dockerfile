@@ -17,8 +17,11 @@ RUN apt update && apt install git -y && git clone https://github.com/littlejo/ay
 WORKDIR /root/aya-examples/tracepoint-binary
 
 ENV CARGO_TARGET_DIR=/root/build-cache
+ENV CARGO_HOME=/root/cargo-home
 RUN cargo build
 
 FROM base as final
 ENV CARGO_TARGET_DIR=/root/build-cache
+ENV CARGO_HOME=/root/cargo-home
 COPY --from=builder /root/build-cache /root/build-cache
+COPY --from=builder /root/cargo-home /root/cargo-home
