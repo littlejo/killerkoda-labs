@@ -10,7 +10,8 @@
       {
         "title": "Run docker container",
         "text": "intro/step1/text.md",
-        "verify": "intro/step1/verify.sh"
+        "verify": "intro/step1/verify.sh",
+        "background": "ls-command.sh"
       },
       {
         "title": "Check your Aya program",
