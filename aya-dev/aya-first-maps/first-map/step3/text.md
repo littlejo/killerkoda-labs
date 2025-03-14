@@ -36,7 +36,7 @@ let filename_bytes = bpf_probe_read_user_str_bytes(filename_src_addr, &mut *buf)
 
 * Now it should be compiled and work:
 ```bash
-cd /host/root/tracepoint-binary
+cd /host/root/project
 RUST_LOG=info cargo run
 ```{{exec interrupt}}
 

@@ -16,7 +16,7 @@ before this line: `from_utf8_unchecked(filename_bytes)`
 
 * Now it should be compiled:
 ```bash
-cd /host/root/tracepoint-binary
+cd /host/root/project
 RUST_LOG=info cargo run
 ```{{exec interrupt}}
 

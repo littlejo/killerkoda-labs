@@ -3,8 +3,8 @@ cd aya-examples
 git sparse-checkout init --cone
 git sparse-checkout set tracepoint-binary
 git checkout
-mv tracepoint-binary ..
+mv tracepoint-binary ../project
 cd ..
 rm -rf aya-examples
 
-docker pull littlejo/aya:slim
+docker pull littlejo/aya:1.0.0

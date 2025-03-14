@@ -8,7 +8,7 @@ You need to reset the buf map. after `let filename = unsafe {` line, add this li
 
 * It should work now:
 ```bash
-cd /host/root/tracepoint-binary
+cd /host/root/project
 RUST_LOG=info cargo run
 ```{{exec interrupt}}
 
@@ -25,6 +25,6 @@ use aya_log_ebpf::debug;
 
 * If you want to test with debug:
 ```bash
-cd /host/root/tracepoint-binary
+cd /host/root/project
 RUST_LOG=debug cargo run
 ```{{exec interrupt}}

@@ -1,7 +1,7 @@
 Test the eBPF program before making any modifications... In the container, run these commands:
 
 ```plain
-cd /host/root/tracepoint-binary
+cd /host/root/project
 RUST_LOG=info cargo run
 ```{{exec}}
 
