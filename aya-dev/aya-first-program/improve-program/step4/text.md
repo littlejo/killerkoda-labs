@@ -41,6 +41,9 @@ cargo run
 [INFO  aya_test] tracepoint sys_enter_execve called, binary name : /usr/bin/git
 [INFO  aya_test] tracepoint sys_enter_execve called, binary name : /opt/theia/node
 ```
+
+![multi-terminal with theia](../../img/screenshot-split.png)
+
 * On another terminal, launch shell command like `ls`.
 
 * You must see on the "cargo run" terminal something like:
