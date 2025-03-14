@@ -20,14 +20,20 @@ cd /host/root/project
 RUST_LOG=info cargo run
 ```{{exec interrupt}}
 
-* It can work but not totally:
+* It can work:
 ```
 [INFO  tracepoint_binary] No log for this Binary
 [INFO  tracepoint_binary] No log for this Binary
-[INFO  tracepoint_binary] tracepoint sys_enter_execve called. Binary: /usr/bin/git
 [INFO  tracepoint_binary] No log for this Binary
-[INFO  tracepoint_binary] tracepoint sys_enter_execve called. Binary: /usr/bin/git
 [INFO  tracepoint_binary] No log for this Binary
-[INFO  tracepoint_binary] tracepoint sys_enter_execve called. Binary: /usr/bin/git
+```
+
+* Try to open another terminal
+
+
+Now you should see:
+```
+[INFO  tracepoint_binary] tracepoint sys_enter_execve called. Binary: /usr/bin/sleep
+[INFO  tracepoint_binary] tracepoint sys_enter_execve called. Binary: /usr/bin/ls
 ```
 * Did you find the bug?

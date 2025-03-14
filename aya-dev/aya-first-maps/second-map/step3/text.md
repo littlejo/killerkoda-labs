@@ -12,7 +12,7 @@ program.attach("syscalls", "sys_enter_execve")?;
 
 * Add the list of binaries:
 ```rust
-let exclude_list = ["/usr/bin/git", "/opt/theia/node"];
+let exclude_list = ["/usr/bin/ls", "/usr/bin/sleep"];
 ```{{copy}}
 
 ![work flow of map: retrieve map](../../img/map-workflow-2.png)

@@ -1,6 +1,6 @@
 You need to add a new feature: create a filter to exclude logs from certain binaries:
-* `/usr/bin/git`
-* `/opt/theia/node`
+* `/usr/bin/ls`
+* `/usr/bin/sleep`
 
 How to do this ?
 

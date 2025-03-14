@@ -12,6 +12,8 @@ cd /host/root/project
 RUST_LOG=info cargo run
 ```{{exec interrupt}}
 
+* Open another terminal to test it
+
 Now you can replace info log into debug:
 ```rust
 debug!(&ctx, "No log for this Binary");
