@@ -10,11 +10,10 @@ Launch this command in the Terminal at the bottom:
 docker run --rm -it --name aya \
                     --privileged \
                     --network host \
-                    -e USER=littlejo \
-                    -e RUST_LOG=info \
+                    -w /host/root/ \
                     -v /:/host \
                     -v /sys/kernel/debug:/sys/kernel/debug \
-                    littlejo/aya:slim bash
+                    littlejo/aya:1.0.0 bash
 ```{{exec}}
 
 * It can take a long time. During this time, you can install Rust extensions (in the OPEN VSX Registry) for the Editor:
