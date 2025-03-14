@@ -12,6 +12,7 @@ Launch this command in the Terminal at the bottom:
 docker run --rm -it --name aya \
                     --privileged \
                     --network host \
+                    -w /host/root/project \
                     -v /:/host \
                     -v /sys/kernel/debug:/sys/kernel/debug \
                     littlejo/aya:1.0.0 bash

@@ -3,7 +3,7 @@ You have to modified kernel space program: `aya-test-ebpf/src/main.rs`.
 You need to reset the buf map. after `let filename = unsafe {` line, add this line:
 
 ```rust
-*buf = [0u8; 512];
+*buf = [0u8; LEN_MAX_PATH];
 ```{{copy}}
 
 * It should work now:

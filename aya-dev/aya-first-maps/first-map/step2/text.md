@@ -37,3 +37,15 @@ use aya_ebpf::macros::map;
 * The map is now created. Now we have to use it.
 
 This code does not compile yet because you need to replace the buffer: `let mut buf = [0u8; LEN_MAX_PATH];`
+
+So if you want to test the code, you can temporarily replace this line by:
+```rust
+let mut buf = [0u8; 16];
+```{{copy}}
+
+Now it will compile:
+
+```plain
+cd /host/root/project
+RUST_LOG=info cargo run
+```{{exec interrupt}}
