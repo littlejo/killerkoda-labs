@@ -3,7 +3,7 @@ Now you have to improve the code to fix the issue of truncated filenames. Indeed
 For that, you need to modify **kernel space** of eBPF program.
 
 To edit the code, you need a text editor. You can use the **Editor** tab:
-* Select the `tracepoint-binary` directory
+* Select the `project` directory
 * Navigate to `tracepoint-binary-ebpf/src/main.rs`
 
 ![Screenshot of explorer](../../img/screenshot-explorer.png)
@@ -19,7 +19,7 @@ Test with the value of **512**.
 In the container, stop the Aya program (with CTRL-C) and run these commands:
 
 ```plain
-cd /host/root/tracepoint-binary
+cd /host/root/project
 RUST_LOG=info cargo run
 ```{{exec interrupt}}
 

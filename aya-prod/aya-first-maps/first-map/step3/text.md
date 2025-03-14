@@ -9,7 +9,7 @@ pub fn get_ptr_mut(&self, index: u32) -> Option<*mut T>
 
 You need to replace this code:
 ```rust
-let mut buf = [0u8; LEN_MAX_PATH];
+let mut buf = [0u8; 16];
 ```
 
 So you need mutable access. So `get_ptr_mut()` method is good for that.
@@ -36,7 +36,7 @@ let filename_bytes = bpf_probe_read_user_str_bytes(filename_src_addr, &mut *buf)
 
 * Now it should be compiled and work:
 ```bash
-cd /host/root/tracepoint-binary
+cd /host/root/project
 RUST_LOG=info cargo run
 ```{{exec interrupt}}
 

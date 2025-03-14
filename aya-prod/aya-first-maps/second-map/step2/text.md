@@ -18,7 +18,7 @@ Using an array to check if a binary is in the list is inefficient because it req
 You have to add this line after the other map in the `tracepoint-binary-ebpf/src/main.rs` file:
 ```rust
 #[map]
-static EXCLUDED_CMDS: HashMap<[u8; 512], u8> = HashMap::with_max_entries(10, 0);
+static EXCLUDED_CMDS: HashMap<[u8; LEN_MAX_PATH], u8> = HashMap::with_max_entries(10, 0);
 ```{{copy}}
 
 You need to add library:
@@ -28,7 +28,7 @@ use aya_ebpf::maps::HashMap;
 
 * Now it should be compiled:
 ```bash
-cd /host/root/tracepoint-binary
+cd /host/root/project
 RUST_LOG=info cargo run
 ```{{exec interrupt}}
 

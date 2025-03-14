@@ -12,7 +12,7 @@ program.attach("syscalls", "sys_enter_execve")?;
 
 * Add the list of binaries:
 ```rust
-let exclude_list = ["/usr/bin/git", "/opt/theia/node"];
+let exclude_list = ["/usr/bin/ls", "/usr/bin/sleep"];
 ```{{copy}}
 
 ![work flow of map: retrieve map](../../img/map-workflow-2.png)
@@ -57,7 +57,7 @@ So the main change:
 
 * Now it should be compiled:
 ```bash
-cd /host/root/tracepoint-binary
+cd /host/root/project
 RUST_LOG=info cargo run
 ```{{exec interrupt}}
 
