@@ -42,6 +42,8 @@ use aya_log_ebpf::{debug,error};
 
 As part of cleanup, don't forget to remove any unnecessary imports from the top of the file.
 
+![screenshot of the code](../../img/screenshot-hook.png)
+
 ### Compile and run the code
 
 Ensure your code compiles successfully:
