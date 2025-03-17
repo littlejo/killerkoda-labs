@@ -1,4 +1,8 @@
-You need to clean filter.rs.
+The goal of `filter.rs` is to prevent to display some binaries. So, you need to clean up `filter.rs`.
+
+### Update the `try_tracepoint_binary_filter` function
+
+You should have the following code in your `filter.rs` file for the main function:
 
 ```rust
 fn try_tracepoint_binary_filter(ctx: TracePointContext) -> Result<u32, i64> {
@@ -18,8 +22,9 @@ fn try_tracepoint_binary_filter(ctx: TracePointContext) -> Result<u32, i64> {
 }
 ```{{copy}}
 
+### Add a jump to the display program 
 
-You need to add jump to the display program:
+Next, you need to add a tail call to the display program:
 
 ```rust
 let res = unsafe { JUMP_TABLE.tail_call(&ctx, 1) };
@@ -28,13 +33,23 @@ if res.is_err() {
 }
 ```{{copy}}
 
-Don't forget to add library:
+Also, **import the required library**:
 
 ```rust
 use aya_log_ebpf::{debug,error};
 ```{{copy}}
 
+### Clean up unused imports 
+
+As part of cleanup, don't forget to remove any unnecessary imports from the top of the file.
+
+### Compile and run the code
+
+Finally, ensure your code compiles successfully:
+
 ```plain
 cd /host/root/project
 RUST_LOG=debug cargo run
 ```{{exec interrupt}}
+
+Now, your `filter.rs` is clean and only contains the essential logic to interact with the display program.

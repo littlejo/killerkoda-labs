@@ -1,6 +1,4 @@
-As your code in `main.rs` grow up, you need to split the code into small files.
-
-Create a file `hook.rs`:
+To further organize your code, move the main logic from `main.rs` into a new file called `hook.rs`:
 
 ```rust
 use aya_ebpf::{
@@ -42,7 +40,7 @@ fn try_tracepoint_binary(ctx: TracePointContext) -> Result<u32, i64> {
 }
 ```{{copy}}
 
-On `main.rs`, you need to clean the file and you will have:
+Then, clean up `main.rs` so that it only contains the necessary module declarations and panic handler:
 
 ```rust
 #![no_std]
@@ -58,10 +56,11 @@ fn panic(_info: &core::panic::PanicInfo) -> ! {
 }
 ```{{copy}}
 
-Your code has to compile:
+Finally, make sure your code compiles successfully:
 
 ```plain
 cd /host/root/project
-RUST_LOG=info cargo run
+cargo run
 ```{{exec interrupt}}
 
+Now, your code is cleaner and better structured, making it easier to implement tail calls efficiently. 

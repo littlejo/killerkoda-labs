@@ -10,3 +10,4 @@ cd ..
 rm -rf aya-examples
 
 echo 'pub const EXCLUDE_LIST: [&str; 2] = ["/usr/bin/git", "/opt/theia/node"];' > $project_dir/tracepoint-binary/src/constant.rs
+touch $project_dir/tracepoint-binary-ebpf/src/{common.rs,hook.rs}

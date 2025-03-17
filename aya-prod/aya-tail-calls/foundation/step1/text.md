@@ -1,17 +1,15 @@
-You need to create a map for the creation of tail calls
-
-Add these lines to this file `common.rs`:
+To enable tail calls, you need to create a [Program Array](https://docs.ebpf.io/linux/map-type/BPF_MAP_TYPE_PROG_ARRAY/) map. Add the following lines to `common.rs`:
 
 ```rust
 #[map]
 pub static JUMP_TABLE: ProgramArray = ProgramArray::with_max_entries(2, 0);
 ```{{copy}}
 
-* There are 2 entries:
+* This map will hold two entries:
   * filter
   * display
 
-Don't forget to modify libraries:
+Also, make sure to update the library imports in `common.rs`:
 
 ```rust
 use aya_ebpf::{
@@ -20,7 +18,9 @@ use aya_ebpf::{
 };
 ```{{copy}}
 
+Finally, ensure your code compiles correctly:
+
 ```plain
 cd /host/root/project
-RUST_LOG=info cargo run
+cargo run
 ```{{exec interrupt}}
