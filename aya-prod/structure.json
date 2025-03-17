@@ -4,6 +4,7 @@
   "items": [
     { "path": "aya-introduction" },
     { "path": "aya-first-program" },
-    { "path": "aya-first-maps" }
+    { "path": "aya-first-maps" },
+    { "path": "aya-tail-calls" }
   ]
 }
