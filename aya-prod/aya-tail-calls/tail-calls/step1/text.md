@@ -1,3 +1,5 @@
+Now you need to modify user side of your code. So you are in the this directory: `tracepoint-binary-ebpf/src/`
+
 The goal of `hook.rs` is to retrieve the binaries that are being executed. So, you need to clean up `hook.rs`.
 
 ### Update the `try_tracepoint_binary` function

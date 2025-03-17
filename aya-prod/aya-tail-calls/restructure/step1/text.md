@@ -1,4 +1,4 @@
-As your `main.rs` file grows, you need to split the code into smaller files.
+As your `main.rs` file grows in kernel side, you need to split the code into smaller files.
 
 Start by editing the empty `common.rs` file:
 

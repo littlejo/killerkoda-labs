@@ -1,12 +1,15 @@
 Now, you're working in user space (`tracepoint-binary/src/main.rs`).
 
 Your goal is to:
+
 ✅ Retrieve the eBPF map that you just created on the kernel side.
+
 ✅ Attach the eBPF programs in user space.
+
 ✅ Fill the eBPF map with these programs to enable tail calls.
 
 
-## Retrieve the eBPF map
+### Retrieve the eBPF map
 
 Add the following code before `let ctrl_c = signal::ctrl_c();`:
 
@@ -21,7 +24,7 @@ Also, **import the required library**:
 use aya::maps::ProgramArray;
 ```{{copy}}
 
-## Attach the eBPF programs and fill the map
+### Attach the eBPF programs and fill the map
 
 Insert this snippet:
 
@@ -37,6 +40,8 @@ for (i, prg) in prg_list.iter().enumerate() {
     }
 }
 ```{{copy}}
+
+### Compile and run the code
 
 
 * Ensure your code compiles successfully:
