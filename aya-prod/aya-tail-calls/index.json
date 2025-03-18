@@ -29,6 +29,10 @@
         "verify": "restructure/step2/verify.sh"
       },
       {
+        "title": "Goal",
+        "text": "goal/step1/text.md"
+      },
+      {
         "title": "Foundation: create map",
         "text": "foundation/step1/text.md",
         "verify": "foundation/step1/verify.sh"

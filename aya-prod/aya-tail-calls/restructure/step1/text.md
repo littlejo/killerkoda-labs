@@ -1,4 +1,8 @@
-As your `main.rs` file grows in kernel side, you need to split the code into smaller files.
+You need to restructure in `project/tracepoint-binary-ebpf/src/` directory.
+
+![screenshot of explorer](../../img/screenshot-explorer-common.png)
+
+As your `main.rs` file will grow in kernel side, you need to split the code into smaller files.
 
 Start by editing the empty `common.rs` file:
 

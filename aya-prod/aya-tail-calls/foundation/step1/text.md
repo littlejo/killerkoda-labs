@@ -1,3 +1,5 @@
+![screenshot of documentation of Program Array](../../img/screenshot-doc-map.png)
+
 To enable tail calls, you need to create a [Program Array](https://docs.ebpf.io/linux/map-type/BPF_MAP_TYPE_PROG_ARRAY/) map. Add the following lines to `common.rs`:
 
 ```rust

@@ -1,3 +1,5 @@
+![screenshot of explorer](../../img/screenshot-explorer-hook.png)
+
 To further organize your code, move the main logic from `main.rs` into a new file called `hook.rs`:
 
 ```rust
