@@ -1,5 +1,5 @@
 
-We will split the eBPF program into some small eBPF program:
+We will split the eBPF program into some small eBPF programs:
 * retrieve data (`hook.rs`)
 * filter data (`filter.rs`)
 * display data (`display.rs`)
