@@ -2,11 +2,9 @@ Now, you're working in user space (`tracepoint-binary/src/main.rs`).
 
 Your goal is to:
 
-✅ Retrieve the eBPF map that you just created on the kernel side.
-
-✅ Attach the eBPF programs in user space.
-
-✅ Fill the eBPF map with these programs to enable tail calls.
+* Retrieve the eBPF map that you just created on the kernel side.
+* Attach the eBPF programs in user space.
+* Fill the eBPF map with these programs to enable tail calls.
 
 
 ### Retrieve the eBPF map
@@ -52,9 +50,9 @@ cargo run
 
 Now that the foundation for tail calls is in place, you need to refine the eBPF programs to make them fully functional.
 
-🔹 Enable dynamic interaction between eBPF programs using tail calls
+* Enable dynamic interaction between eBPF programs using tail calls
 You'll modify the programs so they can chain execution dynamically through the JUMP_TABLE map.
-🔹 Define a specific purpose for each eBPF program
+* Define a specific purpose for each eBPF program
 
 Each program (filter and display) should have a clear, distinct role:
 * filter: Apply filtering logic before processing events.
