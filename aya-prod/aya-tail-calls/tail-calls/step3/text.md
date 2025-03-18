@@ -18,7 +18,7 @@ fn try_tracepoint_binary_display(ctx: TracePointContext) -> Result<u32, i64> {
 Also, **import the required library**:
 
 ```rust
-use aya_log_ebpf::debug;
+use aya_log_ebpf::{info,debug};
 ```{{copy}}
 
 ### Clean up unused imports 
