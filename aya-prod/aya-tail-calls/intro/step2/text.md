@@ -11,7 +11,7 @@ RUST_LOG=info cargo run
 
 ![screenshot of documentation](../../img/doc-ebpf-tail-calls.png)
 
-* When you see: "Waiting for Ctrl-C...", You must see on the terminal:
+* When you see: "Waiting for Ctrl-C...", You must see on the terminal, something like:
 ```plain
-[INFO  aya_test] tracepoint sys_enter_execve called Binary: $NAME_OF_BINARY
+[INFO  tracepoint_binary] No log for this Binary
 ```

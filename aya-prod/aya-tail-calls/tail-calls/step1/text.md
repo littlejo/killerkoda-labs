@@ -32,6 +32,8 @@ if res.is_err() {
 }
 ```{{copy}}
 
+Insert this code before `Ok(0)`.
+
 Also, **import the required library**:
 
 ```rust

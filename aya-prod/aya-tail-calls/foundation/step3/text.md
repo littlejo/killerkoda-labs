@@ -50,8 +50,7 @@ cargo run
 
 Now that the foundation for tail calls is in place, you need to refine the eBPF programs to make them fully functional.
 
-* Enable dynamic interaction between eBPF programs using tail calls
-You'll modify the programs so they can chain execution dynamically through the JUMP_TABLE map.
+* Enable dynamic interaction between eBPF programs using tail calls. You'll modify the programs so they can chain execution dynamically through the JUMP_TABLE map.
 * Define a specific purpose for each eBPF program
 
 Each program (filter and display) should have a clear, distinct role:
