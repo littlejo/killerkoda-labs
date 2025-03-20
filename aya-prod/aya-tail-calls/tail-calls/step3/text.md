@@ -1,3 +1,5 @@
+![schema of the tail calls](../../img/tailcalls-display.png)
+
 The goal of `display.rs` is to display binaries. So, you need to clean up `display.rs`.
 
 ### Update the `try_tracepoint_binary_display` function
