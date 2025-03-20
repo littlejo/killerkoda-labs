@@ -1,1 +1,1 @@
-docker pull littlejo/aya:1.0.0
+docker pull littlejo/aya:1.0.1
