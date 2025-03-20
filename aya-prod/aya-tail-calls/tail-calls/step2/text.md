@@ -1,3 +1,5 @@
+![schema of the tail calls](../../img/tailcalls-filter.png)
+
 The goal of `filter.rs` is to prevent to display some binaries. So, you need to clean up `filter.rs`.
 
 ### Update the `try_tracepoint_binary_filter` function
