@@ -1,6 +1,6 @@
 {
   "title": "Getting started with eBPF with Aya",
-  "description": "Aya is a Rust framework for writing eBPF programs. These labs guide you through using it to develop eBPF programs. You can read the [series of articles](https://dev.to/littlejo/lets-introduce-ebpf-and-aya-40ji) for more information",
+  "description": "Aya is a Rust framework for writing eBPF programs. These labs guide you through using it to develop eBPF programs. 🦀 + 🐝 = Aya",
   "items": [
     { "path": "aya-introduction" },
     { "path": "aya-first-program" },
