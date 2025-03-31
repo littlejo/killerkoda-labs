@@ -1,0 +1,42 @@
+{
+  "title": "WIP: Tracing your syscalls with Aya",
+  "description": "Let's learn how to trace a syscall with Aya",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "background": "docker.sh",
+      "foreground": "setup.sh"
+    },
+    "steps": [
+      {
+        "title": "Run docker container",
+        "text": "intro/step1/text.md",
+        "verify": "intro/step1/verify.sh"
+      },
+      {
+        "title": "Check your Aya program",
+        "text": "intro/step2/text.md",
+        "verify": "intro/step2/verify.sh"
+      },
+      {
+        "title": "Create a hello world program",
+        "text": "tracepoint-exit/step1/text.md",
+        "verify": "tracepoint-exit/step1/verify.sh"
+      },
+      {
+        "title": "Check your Aya program",
+        "text": "tracepoint-exit/step2/text.md",
+        "verify": "tracepoint-exit/step2/verify.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu-4GB-rapid"
+  },
+  "interface": {
+    "layout": "ide"
+  }
+}
