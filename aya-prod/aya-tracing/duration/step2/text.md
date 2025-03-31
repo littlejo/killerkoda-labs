@@ -24,6 +24,15 @@ To create LruHashMap map, you need to add this map on `common.rs`:
 pub static T_ENTER: LruHashMap<u32, u64> = LruHashMap::with_max_entries(16, 0);
 ```{{copy}}
 
+Don't forget to add library for this map:
+```Rust
+use aya_ebpf::{
+    macros::map,
+    maps::{HashMap, PerCpuArray, ProgramArray, LruHashMap},
+    programs::TracePointContext,
+};
+```{{copy}}
+
 
 To fill the map, you need to add this on `hook.rs`:
 ```Rust
@@ -36,6 +45,12 @@ To retrieve the content of the map, you need to add this on `hook_exit.rs`:
 ```Rust
 let tgid = (bpf_get_current_pid_tgid() >> 32) as u32;
 let t_enter = unsafe { T_ENTER.get(&tgid).ok_or(0)? };
+```{{copy}}
+
+Don't forget to add library to access to this map:
+
+```Rust
+use crate::common::*;
 ```{{copy}}
 
 Now you can have the duration on `hook_exit.rs`:

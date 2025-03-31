@@ -29,7 +29,7 @@ RUST_LOG=debug cargo run
 We forgot to tell to cargo to pull ebpf binding library. In the `tracepoint-binary-ebpf/Cargo.toml` file (Category dependencies), you need to add:
 ```Toml
 aya-ebpf-bindings = "0.1.1"
-```
+```{{copy}}
 
 Let's test again:
 
