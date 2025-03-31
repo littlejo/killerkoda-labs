@@ -27,6 +27,16 @@
         "title": "Check your Aya program",
         "text": "tracepoint-exit/step2/text.md",
         "verify": "tracepoint-exit/step2/verify.sh"
+      },
+      {
+        "title": "Use a helper function",
+        "text": "duration/step1/text.md",
+        "verify": "duration/step1/verify.sh"
+      },
+      {
+        "title": "Transmit value from a program to another program",
+        "text": "duration/step2/text.md",
+        "verify": "duration/step2/verify.sh"
       }
     ],
     "finish": {

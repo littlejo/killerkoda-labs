@@ -5,7 +5,7 @@ Let's create another program in the kernel side:
 ```
 cp tracepoint-binary-ebpf/src/hook.rs tracepoint-binary-ebpf/src/hook_exit.rs
 sed -i 's/tracepoint_binary/tracepoint_binary_exit/' tracepoint-binary-ebpf/src/hook_exit.rs
-```{{exec}}
+```{{exec interrupt}}
 
 
 Just empty the file to only have:
@@ -46,7 +46,7 @@ program.load()?;
 program.attach("syscalls", "sys_exit_execve")?;
 ```{{copy}}
 
-After this lines:
+After these lines:
 
 ```Rust
 let program: &mut TracePoint = ebpf.program_mut("tracepoint_binary").unwrap().try_into()?;
