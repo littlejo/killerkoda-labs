@@ -37,6 +37,16 @@
         "title": "Transmit value from a program to another program",
         "text": "duration/step2/text.md",
         "verify": "duration/step2/verify.sh"
+      },
+      {
+        "title": "Convert BUF map",
+        "text": "fusion/step1/text.md",
+        "verify": "fusion/step1/verify.sh"
+      },
+      {
+        "title": "Retrieve map in hook_exit",
+        "text": "fusion/step2/text.md",
+        "verify": "fusion/step2/verify.sh"
       }
     ],
     "finish": {
