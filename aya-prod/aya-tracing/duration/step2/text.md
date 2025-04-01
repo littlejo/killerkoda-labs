@@ -62,4 +62,6 @@ info!(&ctx, "tracepoint sys_exit_execve called. ret: {}, duration: {}", ret, t -
 Now you can test:
 ```
 cargo run
-```{{exec}}
+```{{exec interrupt}}
+
+Now you have the duration of each command.

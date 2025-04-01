@@ -2,7 +2,7 @@ Test the eBPF program before making any modifications... In the container, run t
 
 ```plain
 cd /host/root/project
-RUST_LOG=info cargo run
+RUST_LOG=debug cargo run
 ```{{exec}}
 
 ![screenshot of command](../../img/screenshot-command.png)
@@ -13,5 +13,7 @@ RUST_LOG=info cargo run
 
 * When you see: "Waiting for Ctrl-C...", You must see on the terminal, something like:
 ```plain
-[INFO  tracepoint_binary] No log for this Binary
+[DEBUG tracepoint_binary::hook] hook
+[DEBUG tracepoint_binary::filter] filter
+[DEBUG tracepoint_binary::filter] No log for this Binary
 ```

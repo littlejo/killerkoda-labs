@@ -20,6 +20,11 @@ let t = unsafe{ bpf_ktime_get_ns() };
 debug!(&ctx, "hook_exit {}", t);
 ```{{copy}}
 
+Also add if necessary:
+```Rust
+use aya_log_ebpf::debug;
+```{{copy}}
+
 Let's test:
 
 ```
@@ -36,3 +41,5 @@ Let's test again:
 ```
 RUST_LOG=debug cargo run
 ```{{exec interrupt}}
+
+
