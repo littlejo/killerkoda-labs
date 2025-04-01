@@ -2,7 +2,7 @@
 
 Now hook_exit program can retrieve the `BUF` map and display the content (like you did in the display program):
 
-```Rust
+```rust
 fn try_tracepoint_binary_exit(ctx: TracePointContext) -> Result<u32, i64> {
     let t = unsafe{ bpf_ktime_get_ns() };
     let tgid = (bpf_get_current_pid_tgid() >> 32) as u32;
@@ -19,7 +19,7 @@ fn try_tracepoint_binary_exit(ctx: TracePointContext) -> Result<u32, i64> {
 
 You also need :
 
-```Rust
+```rust
 use core::str::from_utf8_unchecked;
 ```{{copy}}
 

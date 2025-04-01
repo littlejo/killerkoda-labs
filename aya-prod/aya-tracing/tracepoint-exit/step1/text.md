@@ -10,7 +10,7 @@ sed -i 's/tracepoint_binary/tracepoint_binary_exit/' tracepoint-binary-ebpf/src/
 
 Just empty the file to only have:
 
-```Rust
+```rust
 use aya_ebpf::{
     macros::tracepoint, programs::TracePointContext,
 };
@@ -32,7 +32,7 @@ fn try_tracepoint_binary_exit(ctx: TracePointContext) -> Result<u32, i64> {
 ```{{copy}}
 
 You also add on `main.rs`:
-```Rust
+```rust
 mod hook_exit;
 ```{{copy}}
 
@@ -40,7 +40,7 @@ On the user side, you need to load this program in the `tracepoint-binary/src/ma
 
 So you need to add:
 
-```Rust
+```rust
 let program: &mut TracePoint = ebpf.program_mut("tracepoint_binary_exit").unwrap().try_into()?;
 program.load()?;
 program.attach("syscalls", "sys_exit_execve")?;
@@ -48,7 +48,7 @@ program.attach("syscalls", "sys_exit_execve")?;
 
 After these lines:
 
-```Rust
+```rust
 let program: &mut TracePoint = ebpf.program_mut("tracepoint_binary").unwrap().try_into()?;
 program.load()?;
 program.attach("syscalls", "sys_enter_execve")?;

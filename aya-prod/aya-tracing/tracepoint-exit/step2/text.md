@@ -10,13 +10,13 @@ The only one field interesting is ret. It's at offset 16. It's return code of th
 
 So you need to replace this line in the `hook_exit.rs` file:
 
-```Rust
+```rust
     info!(&ctx, "tracepoint sys_exit_execve called.");
 ```
 
 by:
 
-```Rust
+```rust
 let ret :i64 = unsafe { ctx.read_at(16)? };
 info!(&ctx, "tracepoint sys_exit_execve called. ret: {}", ret);
 ```{{copy}}

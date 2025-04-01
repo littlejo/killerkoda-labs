@@ -4,24 +4,24 @@ You need a helper function to create a timer.
 
 To use it, you need to add
 
-```Rust
+```rust
 use aya_ebpf_bindings::helpers::bpf_ktime_get_ns;
 ```{{copy}}
 
 Let's add this function on `hook.rs` and `hook_exit.rs`:
 
-```Rust
+```rust
 let t = unsafe{ bpf_ktime_get_ns() };
 debug!(&ctx, "hook {}", t);
 ```{{copy}}
 
-```Rust
+```rust
 let t = unsafe{ bpf_ktime_get_ns() };
 debug!(&ctx, "hook_exit {}", t);
 ```{{copy}}
 
 Also add if necessary:
-```Rust
+```rust
 use aya_log_ebpf::debug;
 ```{{copy}}
 

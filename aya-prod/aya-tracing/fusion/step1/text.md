@@ -3,14 +3,14 @@ The hook exit program can't retrieve directly BUF map because the type of map is
 ## Common
 
 In `common.rs`, So you need to replace:
-```Rust
+```rust
 #[map]
 pub static BUF: PerCpuArray<[u8; MAX_PATH_LEN]> = PerCpuArray::with_max_entries(1, 0);
 ```
 
 by:
 
-```Rust
+```rust
 #[map]
 pub static BUF: LruHashMap<u32, [u8; MAX_PATH_LEN]> = LruHashMap::with_max_entries(16, 0);
 ```{{copy}}
@@ -20,7 +20,7 @@ pub static BUF: LruHashMap<u32, [u8; MAX_PATH_LEN]> = LruHashMap::with_max_entri
 
 In `hook.rs`, you need to change like that:
 
-```Rust
+```rust
 fn try_tracepoint_binary(ctx: TracePointContext) -> Result<u32, i64> {
     let t = unsafe{ bpf_ktime_get_ns() };
     debug!(&ctx, "main {}", t);
@@ -42,7 +42,7 @@ fn try_tracepoint_binary(ctx: TracePointContext) -> Result<u32, i64> {
 ## Filter
 
 In `filter.rs`, you need to change like that:
-```Rust
+```rust
 fn try_tracepoint_binary_filter(ctx: TracePointContext) -> Result<u32, i64> {
     debug!(&ctx, "filter");
     let tgid = (bpf_get_current_pid_tgid() >> 32) as u32; //ADDED
@@ -62,7 +62,7 @@ fn try_tracepoint_binary_filter(ctx: TracePointContext) -> Result<u32, i64> {
 ```{{copy}}
 
 Don't forget to add library:
-```Rust
+```rust
 use aya_ebpf::helpers::bpf_get_current_pid_tgid;
 ```{{copy}}
 
@@ -70,7 +70,7 @@ use aya_ebpf::helpers::bpf_get_current_pid_tgid;
 
 In `display.rs`, you need to change like that:
 
-```Rust
+```rust
 fn try_tracepoint_binary_display(ctx: TracePointContext) -> Result<u32, i64> {
     debug!(&ctx, "display");
     let tgid = (bpf_get_current_pid_tgid() >> 32) as u32; //ADD
@@ -87,7 +87,7 @@ fn try_tracepoint_binary_display(ctx: TracePointContext) -> Result<u32, i64> {
 ```{{copy}}
 
 Don't forget to add library:
-```Rust
+```rust
 use aya_ebpf::helpers::bpf_get_current_pid_tgid;
 ```{{copy}}
 
