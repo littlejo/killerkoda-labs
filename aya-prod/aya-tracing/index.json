@@ -24,7 +24,7 @@
         "verify": "tracepoint-exit/step1/verify.sh"
       },
       {
-        "title": "Check your Aya program",
+        "title": "Improve your exit program",
         "text": "tracepoint-exit/step2/text.md",
         "verify": "tracepoint-exit/step2/verify.sh"
       },

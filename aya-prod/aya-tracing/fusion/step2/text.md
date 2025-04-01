@@ -17,6 +17,12 @@ fn try_tracepoint_binary_exit(ctx: TracePointContext) -> Result<u32, i64> {
 }
 ```{{copy}}
 
+You also need :
+
+```Rust
+use core::str::from_utf8_unchecked;
+```{{copy}}
+
 Let's test:
 
 ```
