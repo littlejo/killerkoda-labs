@@ -1,0 +1,62 @@
+{
+  "title": "WIP: Tracing your syscalls with Aya",
+  "description": "Let's learn how to trace a syscall with Aya",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "background": "docker.sh",
+      "foreground": "setup.sh"
+    },
+    "steps": [
+      {
+        "title": "Run docker container",
+        "text": "intro/step1/text.md",
+        "verify": "intro/step1/verify.sh"
+      },
+      {
+        "title": "Check your Aya program",
+        "text": "intro/step2/text.md",
+        "verify": "intro/step2/verify.sh"
+      },
+      {
+        "title": "Create a hello world program",
+        "text": "tracepoint-exit/step1/text.md",
+        "verify": "tracepoint-exit/step1/verify.sh"
+      },
+      {
+        "title": "Improve your exit program",
+        "text": "tracepoint-exit/step2/text.md",
+        "verify": "tracepoint-exit/step2/verify.sh"
+      },
+      {
+        "title": "Use a helper function",
+        "text": "duration/step1/text.md",
+        "verify": "duration/step1/verify.sh"
+      },
+      {
+        "title": "Transmit value from a program to another program",
+        "text": "duration/step2/text.md",
+        "verify": "duration/step2/verify.sh"
+      },
+      {
+        "title": "Convert BUF map",
+        "text": "fusion/step1/text.md",
+        "verify": "fusion/step1/verify.sh"
+      },
+      {
+        "title": "Retrieve map in hook_exit",
+        "text": "fusion/step2/text.md",
+        "verify": "fusion/step2/verify.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu-4GB-rapid"
+  },
+  "interface": {
+    "layout": "ide"
+  }
+}
