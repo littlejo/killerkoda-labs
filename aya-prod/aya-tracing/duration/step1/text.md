@@ -2,6 +2,8 @@ You need a helper function to create a timer.
 
 `bpf_ktime_get_ns()` is a helper function to get timestamp in nanoseconds.
 
+![Documentation of bpf_ktime_get_ns](../../img/bpf_ktime_get_ns.png)
+
 To use it, you need to add
 
 ```rust

@@ -58,3 +58,7 @@ Now you can test:
 ```
 cargo run
 ```{{exec}}
+
+If you open a new terminal you can obtain something like:
+
+![Output of exit hello world program](../../img/output-hello-world.png)
