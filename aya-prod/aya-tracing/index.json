@@ -34,7 +34,7 @@
         "verify": "duration/step1/verify.sh"
       },
       {
-        "title": "Which map to Transmit value from a program to another program?",
+        "title": "Which map to transmit value?",
         "text": "duration/step2/text.md",
         "verify": "duration/step2/verify.sh"
       },
