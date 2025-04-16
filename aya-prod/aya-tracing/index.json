@@ -34,9 +34,14 @@
         "verify": "duration/step1/verify.sh"
       },
       {
-        "title": "Transmit value from a program to another program",
+        "title": "Which map to Transmit value from a program to another program?",
         "text": "duration/step2/text.md",
         "verify": "duration/step2/verify.sh"
+      },
+      {
+        "title": "Transmit value from a program to another program",
+        "text": "duration/step3/text.md",
+        "verify": "duration/step3/verify.sh"
       },
       {
         "title": "Convert BUF map",

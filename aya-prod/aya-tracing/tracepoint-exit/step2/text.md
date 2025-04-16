@@ -1,3 +1,5 @@
+Now we only work on kernel space until the end of the lab: `tracepoint-binary-ebpf/src` directory.
+
 What can we retrieve with this tracepoint?
 
 Run these commands:
