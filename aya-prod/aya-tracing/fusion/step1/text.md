@@ -1,3 +1,7 @@
+![Diagram: How to retrieve BUF map?](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fx8chsm2be9tshssj4pt.png)
+
+Now that we've managed to retrieve the duration of the execve syscall, it would be nice to have everything on the same line: binary name, duration and return code. The output tracepoint program must therefore be able to retrieve the buffer filled by the input tracepoint program.
+
 The hook exit program can't retrieve directly BUF map because the type of map is not design for that. So you need to convert into LruHashMap, the same type as `T_ENTER` map.
 
 ## Common

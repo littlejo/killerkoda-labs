@@ -1,3 +1,5 @@
+Now that we've created a second eBPF program, let's play with the first. Let's take a look at how to calculate the time taken by a syscall execve between its input (`sys_enter_execve`) and its output (`sys_exit_execve`).
+
 You need a helper function to create a timer.
 
 `bpf_ktime_get_ns()` is a helper function to get timestamp in nanoseconds.
@@ -32,7 +34,7 @@ Let's test:
 ```
 RUST_LOG=debug cargo run
 ```{{exec interrupt}}
-
+You probably have a problem of compilation.
 We forgot to tell to cargo to pull ebpf binding library. In the `tracepoint-binary-ebpf/Cargo.toml` file (Category dependencies), you need to add:
 ```Toml
 aya-ebpf-bindings = "0.1.1"
