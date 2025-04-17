@@ -42,6 +42,8 @@ Now you can test:
 cargo run
 ```{{exec}}
 
+## In another terminal
+
 * Launch a command which the binary doesn't exist:
 ```
 ./command_not_found
