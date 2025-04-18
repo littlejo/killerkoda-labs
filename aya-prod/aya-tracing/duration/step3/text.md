@@ -56,4 +56,8 @@ Now you can test:
 cargo run
 ```{{exec interrupt}}
 
+You should have something like that:
+
+![Ouput of cargo run](../../img/output-duration.png)
+
 Now you have the duration of each command.

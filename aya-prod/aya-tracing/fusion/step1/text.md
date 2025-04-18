@@ -22,7 +22,21 @@ pub static BUF: LruHashMap<u32, [u8; MAX_PATH_LEN]> = LruHashMap::with_max_entri
 
 ## Hook
 
-In `hook.rs`, you need to change like that:
+In `hook.rs`, you need to change these lines:
+
+```rust
+let buf = BUF.get_ptr_mut(0).ok_or(0)?;
+*buf = ZEROED_ARRAY;
+```
+
+by:
+```rust
+BUF.insert(&tgid, &ZEROED_ARRAY, 0)?;
+let buf = BUF.get_ptr_mut(&tgid).ok_or(0)?;
+```{{copy}}
+
+You will have:
+
 
 ```rust
 fn try_tracepoint_binary(ctx: TracePointContext) -> Result<u32, i64> {
@@ -45,7 +59,18 @@ fn try_tracepoint_binary(ctx: TracePointContext) -> Result<u32, i64> {
 
 ## Filter
 
-In `filter.rs`, you need to change like that:
+In `filter.rs` file, you need to replace this line:
+```rust
+let buf = BUF.get(0).ok_or(0)?;
+```
+
+by:
+```rust
+let tgid = (bpf_get_current_pid_tgid() >> 32) as u32;
+let buf = unsafe { BUF.get(&tgid).ok_or(0)? };
+```{{copy}}
+
+You will have:
 ```rust
 fn try_tracepoint_binary_filter(ctx: TracePointContext) -> Result<u32, i64> {
     debug!(&ctx, "filter");
@@ -72,8 +97,18 @@ use aya_ebpf::helpers::bpf_get_current_pid_tgid;
 
 ## Display
 
-In `display.rs`, you need to change like that:
+In `display.rs` file, you need to replace this line:
+```rust
+let buf = BUF.get(0).ok_or(0)?;
+```
 
+by:
+```rust
+let tgid = (bpf_get_current_pid_tgid() >> 32) as u32;
+let buf = unsafe { BUF.get(&tgid).ok_or(0)? };
+```{{copy}}
+
+You will have:
 ```rust
 fn try_tracepoint_binary_display(ctx: TracePointContext) -> Result<u32, i64> {
     debug!(&ctx, "display");
@@ -99,3 +134,5 @@ Now you can test the program:
 ```
 RUST_LOG=info cargo run
 ```{{exec interrupt}}
+
+The output is similar as the previous output. You just changed the type of the map.
