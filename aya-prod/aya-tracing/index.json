@@ -29,7 +29,7 @@
         "verify": "tracepoint-exit/step2/verify.sh"
       },
       {
-        "title": "Use a helper function",
+        "title": "Create a timer",
         "text": "duration/step1/text.md",
         "verify": "duration/step1/verify.sh"
       },

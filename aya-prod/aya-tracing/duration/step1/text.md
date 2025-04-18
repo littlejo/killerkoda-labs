@@ -46,4 +46,6 @@ Let's test again:
 RUST_LOG=debug cargo run
 ```{{exec interrupt}}
 
+You'll see something like that:
 
+![Ouput of cargo run](../../img/output-timer.png)
