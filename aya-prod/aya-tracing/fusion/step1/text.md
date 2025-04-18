@@ -99,3 +99,5 @@ Now you can test the program:
 ```
 RUST_LOG=info cargo run
 ```{{exec interrupt}}
+
+The output is similar as the previous output. You just changed the type of the map.

@@ -29,4 +29,8 @@ Let's test:
 RUST_LOG=info cargo run
 ```{{exec interrupt}}
 
+If you test, you'll see something like that:
+
+![Ouput of cargo run](../../img/output-fusion.png)
+
 Congrats! You succeeded to create tracing of each command.
