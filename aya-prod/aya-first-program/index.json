@@ -15,7 +15,8 @@
       {
         "title": "Generate your Aya project",
         "text": "program/step1/text.md",
-        "verify": "program/step1/verify.sh"
+        "verify": "program/step1/verify.sh",
+        "background": "program/step1/background.sh"
       },
       {
         "title": "Check your Aya program",
