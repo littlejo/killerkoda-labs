@@ -14,13 +14,13 @@
       },
       {
         "title": "Generate your Aya project",
-        "text": "program/step1/text.md",
-        "verify": "program/step1/verify.sh"
+        "text": "program/step1/text.md"
       },
       {
         "title": "Check your Aya program",
         "text": "program/step2/text.md",
-        "verify": "program/step2/verify.sh"
+        "verify": "program/step2/verify.sh",
+        "background": "program/step2/background.sh"
       },
       {
         "title": "Coding: Which files to modify?",
