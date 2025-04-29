@@ -1,5 +1,5 @@
 {
-  "title": "WIP: Tracing your syscalls with Aya",
+  "title": "Tracing your syscalls with Aya",
   "description": "Let's learn how to trace a syscall with Aya",
   "details": {
     "intro": {
