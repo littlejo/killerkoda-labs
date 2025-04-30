@@ -24,6 +24,6 @@ docker run --rm -it --name aya \
 Like that, in Rust code, you will see coloration of syntax.
 ![Rust plugin](../../img/plugin.png)
 
-If you have time, you can also read the article: [TO WRITE](https://dev.to/littlejo/enhancing-your-aya-program-with-ebpf-maps-4hdj)
+If you have time, you can also read the article:
 
-![screenshot of the article](../../img/aya-article.png)
+[![screenshot of the article](../../img/aya-article.png)](https://dev.to/littlejo/tracing-your-syscalls-with-aya-535o)
