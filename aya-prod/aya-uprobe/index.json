@@ -1,6 +1,6 @@
 {
-  "title": "Creating your first Aya program",
-  "description": "Let's learn how to code with Aya",
+  "title": "Creating a uProbe eBPF program with Aya",
+  "description": "Let's learn how to code uProbe eBPF program with Aya",
   "details": {
     "intro": {
       "text": "intro.md",
