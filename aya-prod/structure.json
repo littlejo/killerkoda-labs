@@ -6,6 +6,7 @@
     { "path": "aya-first-program" },
     { "path": "aya-first-maps" },
     { "path": "aya-tail-calls" },
-    { "path": "aya-tracing" }
+    { "path": "aya-tracing" },
+    { "path": "aya-uprobe" }
   ]
 }
