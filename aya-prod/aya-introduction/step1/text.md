@@ -17,4 +17,3 @@ To ensure the correct binary path is set, run the following command:
 ```plain
 . "$HOME/.cargo/env"
 ```{{exec}}
-
