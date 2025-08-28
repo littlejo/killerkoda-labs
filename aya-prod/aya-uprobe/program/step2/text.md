@@ -23,7 +23,9 @@ cargo generate --name $name \
 
 The Aya uprobe program is generated. Now you have to compile and install:
 ```fish
+cd $name
 cargo run
 ```{{exec}}
 
 The work can start...
+![aya](../../img/aya.webp)

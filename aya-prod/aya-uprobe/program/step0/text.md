@@ -22,4 +22,4 @@ docker exec -it aya bash
 ```{{exec}}
 
 Now you can see what you write on bash in the container:
-![bpftrace](../../img/bpftrace.png)
+![bpftrace](../../img/bpftrace.webp)
