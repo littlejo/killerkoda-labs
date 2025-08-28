@@ -13,8 +13,16 @@
         "verify": "intro/step1/verify.sh"
       },
       {
-        "title": "Generate your Aya project",
+        "title": "Test a program with bpftrace",
+        "text": "program/step0/text.md"
+      },
+      {
+        "title": "Test your own program with bpftrace",
         "text": "program/step1/text.md"
+      },
+      {
+        "title": "Now you can generate and work with Aya",
+        "text": "program/step2/text.md"
       }
     ],
     "finish": {

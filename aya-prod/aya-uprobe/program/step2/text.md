@@ -1,16 +1,29 @@
-Test the eBPF program. In the container, run these commands:
+## In the container
 
-```plain
-cd /host/root/aya-test
-RUST_LOG=info cargo run
+Define some variables, for example:
+
+```fish
+name=test-uprobe
+program_type=uprobe
+target=/host/root/hello
+fn_name=main.hello
 ```{{exec}}
 
-![Schema to show what cargo run do](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/g6bp1c1090w5wjppabkd.png)
+And launch:
 
-* When you see: "Waiting for Ctrl-C...", You must see on the terminal:
-```plain
-[INFO  aya_test] tracepoint sys_enter_execve called
-```
-* Which binaries are being launched? eBPF can help you find them.
+```fish
+cd /host/root/
+cargo generate --name $name \
+               -d program_type=$program_type \
+               -d uprobe_target=$target \
+               -d uprobe_fn_name=$fn_name \
+               https://github.com/aya-rs/aya-template
 
-![hook schema](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/pvxfo2t6mtvzdymrte1i.png)
+```{{exec}}
+
+The Aya uprobe program is generated. Now you have to compile and install:
+```fish
+cargo run
+```{{exec}}
+
+The work can start...

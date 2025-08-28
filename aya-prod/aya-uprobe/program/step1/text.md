@@ -1,15 +1,39 @@
-Generate a new Aya project on /host/root/ directory
-* Project name: `aya-test`
-* Type of eBPF program: tracepoint
-* tracepoint **category**: `syscalls`
-* tracepoint **name**: `sys_enter_execve`
+If you need to test golang program with uprobe program, golang compiler is already installed in the container.
 
-<br>
+Example:
 
-In the container run these commands:
+Create a `hello.go` file:
+```go
+package main
+
+import "fmt"
+
+func hello() int {
+    fmt.Println("Hello, world!")
+    return 3
+}
+
+func main() {
+    ret := hello()
+    fmt.Println("Returned:", ret)
+}
+```{{copy}}
+
+
+Compile the program:
 
 ```plain
 cd /host/root/ # You change directory to the host volume
-cargo generate https://github.com/aya-rs/aya-template #Answer the questions
+go build -gcflags="all=-N -l" -o hello hello.go
 ```{{exec}}
 
+
+You can test with bpftrace:
+
+```fish
+bpftrace -e \
+'uprobe:/host/root/hello:main.hello { printf("Hello go\n"); }'
+```{{exec}}
+
+
+In another terminal, execute the program and see what it happens for the eBPF bpftrace program.
