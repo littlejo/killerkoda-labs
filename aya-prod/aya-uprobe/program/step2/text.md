@@ -28,4 +28,4 @@ cargo run
 ```{{exec}}
 
 The work can start...
-![aya](../../img/aya.webp)
+![aya](../../img/aya.png)
