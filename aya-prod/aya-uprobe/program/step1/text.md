@@ -36,4 +36,9 @@ bpftrace -e \
 ```{{exec}}
 
 
-In another terminal, execute the program and see what it happens for the eBPF bpftrace program.
+In another terminal, execute the program :
+```plain
+./hello
+```{{exec}}
+
+and see what it happens for the eBPF bpftrace program.
