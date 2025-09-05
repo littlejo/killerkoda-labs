@@ -20,6 +20,7 @@ docker run --rm -it --name aya \
   * Rust
   * Rust Syntax
   * Rust Extension Pack
+  * if you need to code in golang: Go Syntax
 
 Like that, in Rust code, you will see coloration of syntax.
 ![Rust plugin](../../img/plugin.png)
