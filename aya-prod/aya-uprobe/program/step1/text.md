@@ -2,6 +2,9 @@ If you need to test golang program with uprobe program, golang compiler is alrea
 
 Example:
 
+
+![hello go](../../img/hello-go.png)
+
 Create a `hello.go` file:
 ```go
 package main
@@ -27,7 +30,6 @@ cd /host/root/ # You change directory to the host volume
 go build -gcflags="all=-N -l" -o hello hello.go
 ```{{exec}}
 
-
 You can test with bpftrace:
 
 ```fish
@@ -42,3 +44,5 @@ In another terminal, execute the program :
 ```{{exec}}
 
 and see what it happens for the eBPF bpftrace program.
+
+![hello go output](../../img/hello-go-output.png)

@@ -12,8 +12,9 @@ bpftrace -e \
 This program should print what you write on bash in the terminal
 
 Open another terminal with split:
+![split](../../img/screenshot-split.png)
 
-Let type some commands: It doesn't work because you're not in the container and the `hook` /bin/bash is in the container.
+Let's type some commands: It doesn't work because you're not in the container and the `hook` /bin/bash is in the container.
 
 So you need connect to the container:
 
