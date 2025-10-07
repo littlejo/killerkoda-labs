@@ -1,6 +1,6 @@
 {
-  "title": "Creating a uProbe eBPF program with Aya",
-  "description": "Let's learn how to code uProbe eBPF program with Aya",
+  "title": "Creating XDP program with Aya",
+  "description": "Let's learn how to code XDP program with Aya",
   "details": {
     "intro": {
       "text": "intro.md",
