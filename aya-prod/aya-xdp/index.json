@@ -1,0 +1,38 @@
+{
+  "title": "Creating a uProbe eBPF program with Aya",
+  "description": "Let's learn how to code uProbe eBPF program with Aya",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "steps": [
+      {
+        "title": "Run docker container",
+        "text": "intro/step1/text.md",
+        "verify": "intro/step1/verify.sh"
+      },
+      {
+        "title": "Test a program with bpftrace",
+        "text": "program/step0/text.md"
+      },
+      {
+        "title": "Test your own program with bpftrace",
+        "text": "program/step1/text.md"
+      },
+      {
+        "title": "Now you can generate and work with Aya",
+        "text": "program/step2/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu-4GB-rapid"
+  },
+  "interface": {
+    "layout": "ide"
+  }
+}
