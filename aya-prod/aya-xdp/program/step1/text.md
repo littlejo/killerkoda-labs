@@ -1,48 +1,34 @@
-If you need to test golang program with uprobe program, golang compiler is already installed in the container.
+## In the container
 
-Example:
-
-
-![hello go](../../img/hello-go.png)
-
-Create a `hello.go` file:
-```go
-package main
-
-import "fmt"
-
-func hello() int {
-    fmt.Println("Hello, world!")
-    return 3
-}
-
-func main() {
-    ret := hello()
-    fmt.Println("Returned:", ret)
-}
-```{{copy}}
-
-
-Compile the program:
-
-```plain
-cd /host/root/ # You change directory to the host volume
-go build -gcflags="all=-N -l" -o hello hello.go
-```{{exec}}
-
-You can test with bpftrace:
+Define some variables, for example:
 
 ```fish
-bpftrace -e \
-'uprobe:/host/root/hello:main.hello { printf("Hello go\n"); }'
+name=test-xdp
+program_type=xdp
+iface_default=veth0
 ```{{exec}}
 
+And launch:
 
-In another terminal, execute the program :
-```plain
-./hello
+```fish
+cd /host/root/
+cargo generate --name $name \
+               -d program_type=$program_type \
+               -d default_iface=$iface_default \
+               https://github.com/aya-rs/aya-template
+
 ```{{exec}}
 
-and see what it happens for the eBPF bpftrace program.
+The Aya XDP program is generated. Now you have to compile and install:
+```fish
+cd $name
+cargo run
+```{{exec}}
 
-![hello go output](../../img/hello-go-output.png)
+Il you need to install xdp program in another interface you can type:
+```fish
+cargo run -- --iface=veth1
+```{{exec}}
+
+The work can start...
+![aya](../../img/aya.png)

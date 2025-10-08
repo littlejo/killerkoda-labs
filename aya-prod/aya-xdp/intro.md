@@ -1,6 +1,6 @@
-This lab explains how to create a uProbe eBPF program with Aya.
+This lab explains how to create a XDP program with Aya.
 
-If you need more information, you can read the article: [Observability for All Developers with uProbes](https://blog.littlejo.link/en/ebpf-another-type/uprobe/intro/).
+If you need more information, you can read the article: [XDP](https://blog.littlejo.link/en/ebpf-another-type/xdp/intro/).
 
 If you have some trouble, you can contact me on [LinkedIn](https://www.linkedin.com/in/joseph-ligier-4b86632).
 

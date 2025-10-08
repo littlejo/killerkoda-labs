@@ -4,9 +4,9 @@ Before coding an eBPF uprobe program with Aya, you need to install dependancies.
 
 In this tutorial, you only can use **Editor** tab.
 
-First, on the host, create network environment namespaces :
+First, on the host, create network environment namespaces:
 ```sh
-./setup.sh
+setup-namespaces.sh
 ```{{exec}}
 
 Launch this command in the Terminal at the bottom:
@@ -27,9 +27,13 @@ If you need to reset the environment:
 1. Quit docker container (CTRL-D)
 2. On the host, remove container namespaces:
 ```sh
-./teardown.sh
+teardown-namespaces.sh
 ```{{exec}}
-3. Relaunch the container:
+3. On the host, recreate network environment namespaces:
+```sh
+setup-namespaces.sh
+```{{exec}}
+4. Relaunch the container:
 ```sh
 docker run --rm -it --name aya \
                     --privileged \
