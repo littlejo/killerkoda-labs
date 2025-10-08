@@ -20,6 +20,18 @@ setup-namespaces.sh
 
 ![lb h2 h3 namespaces](https://blog.littlejo.link/assets/svg/xdp/namespaces.svg)
 
+* To list all namespaces created:
+
+```sh
+ip netns
+```{{exec}}
+
+* To see IPs on one namespace, for example `lb`:
+
+```sh
+ip netns exec lb ip -brief -family inet addr
+```{{exec}}
+
 ---
 
 ### 🐳 Step 2 — Start the Docker container
