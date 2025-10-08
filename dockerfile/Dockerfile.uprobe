@@ -12,9 +12,16 @@ RUN cargo install --jobs $(nproc) cargo-generate bpf-linker
 
 FROM base as builder
 
-RUN apt update && apt install git -y && git clone https://github.com/littlejo/aya-examples /root/aya-examples
+ENV USER=littlejo
+WORKDIR /root/
 
-WORKDIR /root/aya-examples/tracepoint-binary
+RUN cargo generate --name test-uprobe \
+               -d program_type=uprobe \
+               -d uprobe_target=/proc/self/exe \
+               -d uprobe_fn_name=main=/proc/self/exe \
+               https://github.com/aya-rs/aya-template
+
+WORKDIR /root/test-uprobe
 
 ENV CARGO_TARGET_DIR=/root/build-cache
 ENV CARGO_HOME=/root/cargo-home
@@ -30,5 +37,5 @@ COPY --from=builder /root/build-cache /root/build-cache
 COPY --from=builder /root/cargo-home /root/cargo-home
 
 RUN apt update && \
-    apt install golang bpftrace -y && \
+    apt install sudo golang bpftrace -y && \
     rm -rf /var/lib/apt/lists/*
