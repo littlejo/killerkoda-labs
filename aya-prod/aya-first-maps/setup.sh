@@ -7,4 +7,4 @@ mv tracepoint-binary ../project
 cd ..
 rm -rf aya-examples
 
-docker pull littlejo/aya:1.0.1
+docker pull littlejo/aya:1.0.2

@@ -13,7 +13,7 @@ docker run --rm -it --name aya \
                     -w /host/root/ \
                     -v /:/host \
                     -v /sys/kernel/debug:/sys/kernel/debug \
-                    littlejo/aya:2.0.0 bash
+                    littlejo/aya:2.0.1 bash
 ```{{exec}}
 
 * It can take a long time. During this time, you can install Rust extensions (in the OPEN VSX Registry) for the Editor:
