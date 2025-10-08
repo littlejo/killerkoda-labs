@@ -1,4 +1,4 @@
-## 🧠 Setting up your XDP development environment
+### 🧠 Setting up your XDP development environment
 
 Before coding an XDP program with Aya, you need to set up a suitable development environment.
 We’ll use two components:
@@ -10,9 +10,9 @@ We’ll use two components:
 
 In this tutorial, you can only use the **Editor** tab.
 
-## 🧩 Step 1 — Create network namespaces (on the host)
+### 🧩 Step 1 — Create network namespaces
 
-Run the following script on the host machine to set up the network environment:
+Run the following script in the **terminal at the bottom** of the page:
 
 ```sh
 setup-namespaces.sh
@@ -24,7 +24,7 @@ setup-namespaces.sh
 
 ### 🐳 Step 2 — Start the Docker container
 
-Then, launch the following command in the **terminal at the bottom** of the page:
+Then, launch the following command:
 
 ```sh
 docker run --rm -it --name aya \

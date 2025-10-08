@@ -43,6 +43,10 @@ cargo run
 This will build and load the XDP program onto the default interface (`veth0`).
 ![lb h2 h3 namespaces](https://blog.littlejo.link/assets/svg/xdp/namespaces-xdp.svg)
 
+Your first XDP program is now up and running — the real work begins!
+![aya](../../img/aya.png)
+
+
 ---
 
 ### 🔄 Load on another interface
@@ -58,9 +62,6 @@ If you want to attach you XDP program to a different interface of a different na
 ```fish
 ip netns exec lb cargo run -- --iface=veth6
 ```{{exec}}
-
-Your first XDP program is now up and running — the real work begins!
-![aya](../../img/aya.png)
 
 ---
 
