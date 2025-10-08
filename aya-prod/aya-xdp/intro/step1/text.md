@@ -18,6 +18,7 @@ Run the following script on the host machine to set up the network environment:
 setup-namespaces.sh
 ```{{exec}}
 
+![lb h2 h3 namespaces](https://blog.littlejo.link/assets/svg/xdp/namespaces.svg)
 
 ---
 
