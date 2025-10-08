@@ -1,6 +1,6 @@
 {
-  "title": "Creating XDP program with Aya",
-  "description": "Let's learn how to code XDP program with Aya",
+  "title": "Creating an XDP Program with Aya",
+  "description": "Let's learn how to code an XDP program with Aya",
   "details": {
     "intro": {
       "text": "intro.md",
@@ -8,16 +8,16 @@
     },
     "steps": [
       {
-        "title": "Initialize environment",
+        "title": "Initialize the Environment",
         "text": "intro/step1/text.md",
         "verify": "intro/step1/verify.sh"
       },
       {
-        "title": "Test xdp-filter command",
+        "title": "Test the xdp-filter command",
         "text": "program/step0/text.md"
       },
       {
-        "title": "Now you can generate and work with Aya",
+        "title": "Generate and Work with Aya",
         "text": "program/step1/text.md"
       }
     ],

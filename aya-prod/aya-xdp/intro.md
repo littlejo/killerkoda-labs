@@ -1,4 +1,4 @@
-This lab explains how to create a XDP program with Aya.
+This lab explains how to create an XDP program with Aya.
 
 If you need more information, you can read the article: [XDP](https://blog.littlejo.link/en/ebpf-another-type/xdp/intro/).
 
