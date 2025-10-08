@@ -2,6 +2,7 @@
 
 Let’s start by defining a few environment variables:
 
+```fish
 name=test-xdp
 program_type=xdp
 iface_default=veth0
