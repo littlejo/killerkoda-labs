@@ -1,4 +1,4 @@
-## 🧱 Inside the container
+### 🧱 Define a few environment variables
 
 Let’s start by defining a few environment variables:
 
@@ -50,6 +50,12 @@ If you want to attach your XDP program to a different interface (for example `ve
 
 ```fish
 cargo run -- --iface=veth1
+```{{exec}}
+
+If you want to attach you XDP program to a different interface of a different namespace (for example `lb`):
+
+```fish
+ip netns exec lb cargo run -- --iface=veth6
 ```{{exec}}
 
 Your first XDP program is now up and running — the real work begins!
