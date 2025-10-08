@@ -12,9 +12,16 @@ RUN cargo install cargo-generate bpf-linker
 
 FROM base as builder
 
-RUN apt update && apt install git -y && git clone https://github.com/littlejo/aya-examples /root/aya-examples
+ENV USER=littlejo
+WORKDIR /root/
 
-WORKDIR /root/aya-examples/tracepoint-binary
+RUN cargo generate --name tracepoint-binary \
+               -d program_type=tracepoint \
+               -d tracepoint_category=syscalls \
+               -d tracepoint_name=sys_enter_execve \
+               https://github.com/aya-rs/aya-template
+
+WORKDIR /root/tracepoint-binary
 
 ENV CARGO_TARGET_DIR=/root/build-cache
 ENV CARGO_HOME=/root/cargo-home

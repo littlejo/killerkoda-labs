@@ -8,13 +8,19 @@ RUN apt update && \
     apt install openssl libssl-dev pkg-config -y && \
     rm -rf /var/lib/apt/lists/*
 
-RUN cargo install cargo-generate bpf-linker
+RUN cargo install --jobs $(nproc) cargo-generate bpf-linker
 
 FROM base as builder
 
-RUN apt update && apt install git -y && git clone https://github.com/littlejo/aya-examples /root/aya-examples
+ENV USER=littlejo
+WORKDIR /root/
 
-WORKDIR /root/aya-examples/tracepoint-binary
+RUN cargo generate --name browser-xdp \
+               -d program_type=xdp \
+               -d default_iface=eth0 \
+               https://github.com/aya-rs/aya-template
+
+WORKDIR /root/browser-xdp
 
 ENV CARGO_TARGET_DIR=/root/build-cache
 ENV CARGO_HOME=/root/cargo-home
@@ -28,6 +34,7 @@ ENV RUST_LOG=info
 
 COPY --from=builder /root/build-cache /root/build-cache
 COPY --from=builder /root/cargo-home /root/cargo-home
+
 RUN apt update && \
-    apt install sudo -y && \
+    apt install iproute2 bpftrace sudo procps iptables net-tools iputils-ping xdp-tools -y && \
     rm -rf /var/lib/apt/lists/*
