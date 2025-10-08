@@ -41,6 +41,7 @@ cargo run
 ```{{exec}}
 
 This will build and load the XDP program onto the default interface (`veth0`).
+![lb h2 h3 namespaces](https://blog.littlejo.link/assets/svg/xdp/namespaces-xdp.svg)
 
 ---
 

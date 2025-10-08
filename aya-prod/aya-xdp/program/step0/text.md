@@ -10,6 +10,8 @@ xdp-filter load veth0
 This command attaches a basic XDP program to the interface `veth0`.
 It will display in the terminal any packets or events it intercepts — so you’ll see output when network traffic flows through that interface.
 
+![lb h2 h3 namespaces](https://blog.littlejo.link/assets/svg/xdp/namespaces-xdp-ping.svg)
+
 ---
 
 ### 🪟 Open another terminal
@@ -42,6 +44,8 @@ Now, let’s block packets coming from the `lb` namespace (IP `10.0.0.10`):
 ```sh
 xdp-filter ip -m src 10.0.0.10
 ```{{exec}}
+
+![lb h2 h3 namespaces](https://blog.littlejo.link/assets/svg/xdp/namespaces-xdp-ping-not.svg)
 
 ---
 
