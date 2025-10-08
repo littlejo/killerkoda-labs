@@ -1,60 +1,92 @@
-Before coding an eBPF uprobe program with Aya, you need to install dependancies. I created a Docker Image for that to save time.
+## 🧠 Setting up your XDP development environment
+
+Before coding an XDP program with Aya, you need to set up a suitable development environment.
+We’ll use two components:
+
+* a script to create network namespaces
+* a Docker image that already contains all Rust dependencies
 
 <br>
 
-In this tutorial, you only can use **Editor** tab.
+In this tutorial, you can only use the **Editor** tab.
 
-First, on the host, create network environment namespaces:
+## 🧩 Step 1 — Create network namespaces (on the host)
+
+Run the following script on the host machine to set up the network environment:
+
 ```sh
 setup-namespaces.sh
 ```{{exec}}
 
-Launch this command in the Terminal at the bottom:
+
+---
+
+### 🐳 Step 2 — Start the Docker container
+
+Then, launch the following command in the **terminal at the bottom** of the page:
 
 ```sh
 docker run --rm -it --name aya \
-                    --privileged \
-                    --network host \
-                    -w /host/root/ \
-                    -v /:/host \
-                    -v /sys/kernel/debug:/sys/kernel/debug \
-                    -v /var/run/netns:/var/run/netns \
-                    -v /sys/fs/bpf/:/sys/fs/bpf/ \
-                    littlejo/aya:3.0.1 bash
+  --privileged \
+  --network host \
+  -w /host/root/ \
+  -v /:/host \
+  -v /sys/kernel/debug:/sys/kernel/debug \
+  -v /var/run/netns:/var/run/netns \
+  -v /sys/fs/bpf/:/sys/fs/bpf/ \
+  littlejo/aya:3.0.1 bash
 ```{{exec}}
 
-If you need to reset the environment:
-1. Quit docker container (CTRL-D)
-2. On the host, remove container namespaces:
-```sh
-teardown-namespaces.sh
-```{{exec}}
-3. On the host, recreate network environment namespaces:
-```sh
-setup-namespaces.sh
-```{{exec}}
+> 📝 **Note:**
+> The container mounts several host directories (`/sys/fs/bpf`, `/sys/kernel/debug`, `/var/run/netns`) so that it can access BPF maps, debug information, and host network namespaces — which are required to run XDP programs.
+
+---
+
+### 🔁 Step 3 — Resetting the environment
+
+If you need to reset everything:
+
+1. Quit the Docker container (`CTRL-D`)
+2. On the **host**, remove the namespaces:
+   ```sh
+   teardown-namespaces.sh
+   ```{{exec}}
+3. On the **host**, recreate them:
+   ```sh
+   setup-namespaces.sh
+   ```{{exec}}
 4. Relaunch the container:
-```sh
-docker run --rm -it --name aya \
-                    --privileged \
-                    --network host \
-                    -w /host/root/ \
-                    -v /:/host \
-                    -v /sys/kernel/debug:/sys/kernel/debug \
-                    -v /var/run/netns:/var/run/netns \
-                    -v /sys/fs/bpf/:/sys/fs/bpf/ \
-                    littlejo/aya:3.0.1 bash
-```{{exec}}
+   ```sh
+   docker run --rm -it --name aya \
+     --privileged \
+     --network host \
+     -w /host/root/ \
+     -v /:/host \
+     -v /sys/kernel/debug:/sys/kernel/debug \
+     -v /var/run/netns:/var/run/netns \
+     -v /sys/fs/bpf/:/sys/fs/bpf/ \
+     littlejo/aya:3.0.1 bash
+   ```{{exec}}
 
-* It can take a long time. During this time, you can install Rust extensions (in the OPEN VSX Registry) for the Editor:
-  * Rust
-  * Rust Syntax
-  * Rust Extension Pack
+---
 
-Like that, in Rust code, you will see coloration of syntax.
+### ⚙️ Optional — Improve your Editor experience
+
+> ⏳ This setup can take a few minutes.
+> In the meantime, you can install the following **Rust extensions** (from the Open VSX Registry) in the Editor:
+>
+> - **Rust**
+> - **Rust Syntax**
+> - **Rust Extension Pack**
+
+This will enable syntax highlighting for Rust code.
 ![Rust plugin](../../img/plugin.png)
 
+---
 
-If you have time, you can also read the article: [Observability for All Developers with uProbes](https://blog.littlejo.link/en/ebpf-another-type/xdp/intro/).
+### 📖 Want to go further?
+
+If you have some time, you can also read this introductory article on XDP:
+👉 [XDP: eBPF Another Type](https://blog.littlejo.link/en/ebpf-another-type/xdp/intro/)
 
 ![screenshot of the article](../../img/aya-article.png)
