@@ -1,6 +1,6 @@
 This lab explains how to create an XDP program with Aya.
 
-If you need more information, you can read the article: [XDP](https://blog.littlejo.link/en/ebpf-another-type/xdp/intro/).
+If you need more information, you can read the article: [XDP: The Ultra-Fast Firewall Inside Linux](https://blog.littlejo.link/en/ebpf-another-type/xdp/intro/).
 
 If you have some trouble, you can contact me on [LinkedIn](https://www.linkedin.com/in/joseph-ligier-4b86632).
 

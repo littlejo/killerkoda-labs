@@ -100,6 +100,6 @@ This will enable syntax highlighting for Rust code.
 ### 📖 Want to go further?
 
 If you have some time, you can also read this introductory article on XDP:
-👉 [XDP: eBPF Another Type](https://blog.littlejo.link/en/ebpf-another-type/xdp/intro/)
+👉 [XDP: The Ultra-Fast Firewall Inside Linux](https://blog.littlejo.link/en/ebpf-another-type/xdp/intro/)
 
 ![screenshot of the article](../../img/aya-article.png)
