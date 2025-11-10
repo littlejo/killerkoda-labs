@@ -1,4 +1,4 @@
-Welcome to the XDP world!
+Welcome to the Goya world!
 
 If you need more information, you can read [the documentation](https://github.com/goya-rs/doc).
 

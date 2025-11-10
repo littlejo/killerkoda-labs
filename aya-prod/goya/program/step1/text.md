@@ -45,7 +45,7 @@ This will build and load the XDP program onto the default interface (`veth0`).
 
 Your first XDP program is now up and running — the real work begins!
 ```fish
-ip netns exec ping 10.0.0.1
+ip netns exec lb ping 10.0.0.1
 ```{{exec}}
 
 ![aya](../../img/aya.png)
