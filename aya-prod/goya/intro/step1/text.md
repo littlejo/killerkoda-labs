@@ -70,15 +70,15 @@ If you need to reset everything:
    ```{{exec}}
 4. Relaunch the container:
    ```sh
-docker run --rm -it --name aya \
-  --privileged \
-  --network host \
-  -w /host/root/ \
-  -v /:/host \
-  -v /sys/kernel/debug:/sys/kernel/debug \
-  -v /var/run/netns:/var/run/netns \
-  -v /sys/fs/bpf/:/sys/fs/bpf/ \
-  littlejo/aya:goya bash
+   docker run --rm -it --name aya \
+     --privileged \
+     --network host \
+     -w /host/root/ \
+     -v /:/host \
+     -v /sys/kernel/debug:/sys/kernel/debug \
+     -v /var/run/netns:/var/run/netns \
+     -v /sys/fs/bpf/:/sys/fs/bpf/ \
+     littlejo/aya:goya bash
    ```{{exec}}
 
 ---
