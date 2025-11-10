@@ -27,7 +27,7 @@ cargo generate --name $name \
                https://github.com/goya-rs/goya-template
 ```{{exec}}
 
-This command uses the official [Aya template](https://github.com/aya-rs/aya-template) to scaffold a new XDP program project.
+This command uses the official [Goya template](https://github.com/goya-rs/goya-template) to scaffold a new XDP program project.
 
 ---
 
@@ -44,6 +44,10 @@ This will build and load the XDP program onto the default interface (`veth0`).
 ![lb h2 h3 namespaces](https://blog.littlejo.link/assets/svg/xdp/namespaces-xdp.svg)
 
 Your first XDP program is now up and running — the real work begins!
+```fish
+ip netns exec ping 10.0.0.1
+```{{exec}}
+
 ![aya](../../img/aya.png)
 
 
