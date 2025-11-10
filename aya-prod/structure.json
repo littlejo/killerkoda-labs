@@ -8,6 +8,7 @@
     { "path": "aya-tail-calls" },
     { "path": "aya-tracing" },
     { "path": "aya-uprobe" },
-    { "path": "aya-xdp" }
+    { "path": "aya-xdp" },
+    { "path": "goya" }
   ]
 }
