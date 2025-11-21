@@ -55,14 +55,14 @@ ip netns exec lb ping 10.0.0.1
 
 ### 🔄 Load on another interface
 
-If you want to attach your XDP program to a different interface (for example `veth1`), you can specify it with the `--iface` option:
+If you want to attach your XDP program to a different interface (for example `veth1`), you can specify it with the `HOOK` option:
 
 ```fish
-task IFACE=veth1
+task HOOK=veth1
 ```{{exec}}
 
 If you want to attach you XDP program to a different interface of a different namespace (for example `lb`):
 
 ```fish
-ip netns exec lb task IFACE=veth6
+ip netns exec lb task HOOK=veth6
 ```{{exec}}

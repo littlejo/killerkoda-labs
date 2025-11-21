@@ -1,6 +1,6 @@
 ### 🧠 Setting up your XDP development environment
 
-Before coding an XDP program with Aya, you need to set up a suitable development environment.
+Before coding an XDP program with Goya, you need to set up a suitable development environment.
 We’ll use two components:
 
 * a script to create network namespaces
@@ -39,7 +39,7 @@ ip netns exec lb ip -brief -family inet addr
 Then, launch the following command:
 
 ```sh
-docker run --rm -it --name aya \
+docker run --rm -it --name goya \
   --privileged \
   --network host \
   -w /host/root/ \
@@ -70,7 +70,7 @@ If you need to reset everything:
    ```{{exec}}
 4. Relaunch the container:
    ```sh
-   docker run --rm -it --name aya \
+   docker run --rm -it --name goya \
      --privileged \
      --network host \
      -w /host/root/ \
