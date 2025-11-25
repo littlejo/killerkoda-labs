@@ -88,11 +88,12 @@ If you need to reset everything:
 ### ⚙️ Optional — Improve your Editor experience
 
 > ⏳ This setup can take a few minutes.
-> In the meantime, you can install the following **Rust extensions** (from the Open VSX Registry) in the Editor:
+> In the meantime, you can install the following **Rust and Go extensions** (from the Open VSX Registry) in the Editor:
 >
 > - **Rust**
 > - **Rust Syntax**
 > - **Rust Extension Pack**
+> - **Go syntax**
 
 This will enable syntax highlighting for Rust code.
 ![Rust plugin](../../img/plugin.png)
