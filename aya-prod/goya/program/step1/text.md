@@ -27,6 +27,9 @@ cargo generate --name $name \
                https://github.com/goya-rs/goya-template
 ```{{exec}}
 
+> 📝 **Note:**
+> If you want to generate another type of eBPF program, you just run `cargo generate https://github.com/goya-rs/goya-template`
+
 This command uses the official [Goya template](https://github.com/goya-rs/goya-template) to scaffold a new XDP program project.
 
 ---
