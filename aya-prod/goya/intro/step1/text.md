@@ -1,3 +1,5 @@
+You can skip creating network namespaces if you want to test a program type other than XDP or TC.
+
 ### 🧠 Setting up your XDP development environment
 
 Before coding an XDP program with Goya, you need to set up a suitable development environment.
