@@ -48,7 +48,7 @@ Your first XDP program is now up and running — the real work begins!
 ip netns exec lb ping 10.0.0.1
 ```{{exec}}
 
-![aya](../../img/aya.png)
+![aya](../../img/goya.png)
 
 
 ---
@@ -59,10 +59,10 @@ If you want to attach your XDP program to a different interface (for example `ve
 
 ```fish
 task HOOK=veth1
-```{{exec}}
+```{{exec interrupt}}
 
 If you want to attach you XDP program to a different interface of a different namespace (for example `lb`):
 
 ```fish
 ip netns exec lb task HOOK=veth6
-```{{exec}}
+```{{exec interrupt}}
