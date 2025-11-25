@@ -9,15 +9,15 @@ iface_default=veth0
 ```{{exec}}
 
 These variables define:
-- the **name** of your Aya project (`test-xdp`)
+- the **name** of your Goya project (`test-xdp`)
 - the **program type** (`xdp`)
 - the **default network interface** (`veth0`)
 
 ---
 
-### 🧩 Generate a new Aya project
+### 🧩 Generate a new Goya project
 
-Run the following command to create a new Aya XDP program template:
+Run the following command to create a new Goya XDP program template:
 
 ```fish
 cd /host/root/
